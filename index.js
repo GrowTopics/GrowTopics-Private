@@ -108,7 +108,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 if (invite) {
 		    await reaction.message.reactions.removeAll()
                     await invite.delete();
-                    await reaction.message.channel.send('Invite link disabled.')
+                    await reaction.message.channel.send(`${invite.url} Invite link disabled.`)
                 } else {
                     return
                 }
@@ -120,7 +120,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 //Invite Tracker
 bot.on('inviteCreate', async invite => {
 	const inviteEmbed = new Discord.MessageEmbed()
-	        inviteEmbed.setColor('352256')
+	        inviteEmbed.setColor('a64636')
 		inviteEmbed.setTitle(`${invite.inviter.tag} has created an invite link!`)
 		inviteEmbed.setDescription(`${invite.url}`)
 		inviteEmbed.setFooter(`User ID: ${invite.inviter.id}`)
