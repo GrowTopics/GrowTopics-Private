@@ -71,7 +71,7 @@ if (message.author.id === '845461877433696266') return
         const embed = new Discord.MessageEmbed()
         const guild = bot.guilds.cache.get('842213244297936918');
 
-        embed.setColor('ff55b2');
+        embed.setColor('a64636');
         embed.setTitle(`${message.author.tag} sent us a message!`);
 
         const attachment = message.attachments.first();
@@ -116,6 +116,17 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         }
     }
 });
+
+//Invite Tracker
+bot.on('inviteCreate', async invite => {
+	const inviteEmbed = new Discord.MessageEmbed()
+	        inviteEmbed.setColor('352256')
+		inviteEmbed.setTitle(`${invite.inviter.tag} has created an invite link!`)
+		inviteEmbed.setDescription(`${invite.url}`)
+		inviteEmbed.setFooter(`User ID: ${invite.inviter.id}`)
+	const invPost = await bot.channels.cache.get('829887733153398804').send(inviteEmbed)
+	await invPost.react('🚫');
+})
 
 // THIS IS THE bot.login
 
