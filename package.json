@@ -9,7 +9,7 @@
   "author": "yaayitsmango",
   "license": "ISC",
   "engines": {
-    "node": "14.15.0"
+    "node": "14.0.0"
   },
   "dependencies": {
     "discord.js": "^12.3.1"
