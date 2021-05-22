@@ -61,10 +61,10 @@ bot.on('message', async message => {
         message.channel.send(exampleEmbed);
     }
 
-if (message.author.id === '776511151034990593') return
-    if (message.channel.id == '776287696309583883' || !message.guild) {
+if (message.author.id === '845461877433696266') return
+    if (message.channel.id == '845476275174506506' || !message.guild) {
         const embed = new Discord.MessageEmbed()
-        const guild = bot.guilds.cache.get('763565098978770954');
+        const guild = bot.guilds.cache.get('842213244297936918');
 
         embed.setColor('ff55b2');
         embed.setTitle(`${message.author.tag} sent us a message!`);
@@ -76,7 +76,7 @@ if (message.author.id === '776511151034990593') return
         embed.setThumbnail(message.author.avatarURL());
         embed.setFooter('User ID: ' + message.author.id);
 
-        const msg = await bot.channels.cache.get('776325286059835462').send(embed)
+        const msg = await bot.channels.cache.get('845476323005956116').send(embed)
         msg.react('❌');
         if (message.guild) message.delete();
     }
