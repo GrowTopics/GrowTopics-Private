@@ -124,7 +124,7 @@ bot.on('inviteCreate', async invite => {
 		inviteEmbed.setTitle(`${invite.inviter.tag} has created an invite link!`)
 		inviteEmbed.setDescription(`${invite.url}`)
 		inviteEmbed.setFooter(`User ID: ${invite.inviter.id}`)
-	const invPost = await bot.channels.cache.get('829887733153398804').send(inviteEmbed)
+	const invPost = await bot.channels.cache.get('845476323005956116').send(inviteEmbed)
 	await invPost.react('🚫');
 })
 
