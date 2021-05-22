@@ -12,8 +12,13 @@ bot.on('ready', () => {
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
 
-}
-)
+    //Remember Chat History
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    tdc.channels.cache.filter(channel => channel.type != "voice" && channel.type != "category").forEach(channel => {
+        channel.messages.fetch();
+
+    })
+});
 
 //DM Command
 bot.on('message', async message => {
@@ -81,6 +86,36 @@ if (message.author.id === '845461877433696266') return
         if (message.guild) message.delete();
     }
 })
+
+//Message Inbox Reactions
+bot.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.message.channel.id === '845476323005956116') {
+        const tdc = bot.guilds.cache.get('842213244297936918')
+        if (user.id === bot.user.id) return
+        if (reaction.message.author.id === bot.user.id) {
+            if (reaction._emoji.name === '❌') {
+                await reaction.message.reactions.removeAll()
+                await reaction.message.react('✅')
+            }
+            if (reaction._emoji.name === '✅') {
+                await reaction.message.reactions.removeAll()
+                await reaction.message.react('❌')
+            }
+            if (reaction._emoji.name === '🚫') {
+                const description = reaction.message.embeds[0].description
+                const invites = await tdc.fetchInvites();
+                const invite = invites.find(invite => invite.url === description);
+                if (invite) {
+		    await reaction.message.reactions.removeAll()
+                    await invite.delete();
+                    await reaction.message.channel.send('Invite link disabled.')
+                } else {
+                    return
+                }
+            }
+        }
+    }
+});
 
 // THIS IS THE bot.login
 
