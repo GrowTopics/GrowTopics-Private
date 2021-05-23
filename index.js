@@ -191,6 +191,7 @@ bot.on('message', async message => {
             .setTimestamp()
 
         message.channel.send(exampleEmbed);
+    msg.react('1️⃣')
     }
 })
 
