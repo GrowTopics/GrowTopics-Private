@@ -188,10 +188,8 @@ bot.on('message', async message => {
             .setColor('a64636')
             .setTitle('Drop Games')
             .setDescription('Learn more about drop games by reacting with a 1️⃣!')
-            .setTimestamp()
-
         message.channel.send(exampleEmbed);
-    msg.react('1️⃣')
+        msg.react('1️⃣');
     }
 })
 
