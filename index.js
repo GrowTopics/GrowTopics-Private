@@ -192,8 +192,8 @@ bot.on('message', async message => {
             .setTitle('Scams')
             .setDescription('Drop Games : <:DropGame:846103300214095883>\nTrust Games : <:TrustGame:846103514508951563>')
 	const msg = await bot.channels.cache.get('845456151495311390').send(embed)
-        msg.react('<:DropGame:846103300214095883>');
-	msg.react('<:TrustGame:846103514508951563>');
+        msg.react(`$<:DropGame:846103300214095883>`);
+	msg.react(`$<:TrustGame:846103514508951563>`);
     }
 })
 
