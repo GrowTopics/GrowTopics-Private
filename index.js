@@ -163,6 +163,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 await reaction.message.reactions.removeAll()
                 await reaction.message.react('846103300214095883')
 		await reaction.message.react('846103514508951563')
+		await reaction.message.react('846167025565958154')
 	    }
 		    if (reaction._emoji.name === 'TrustGame') {
 		    const guild = bot.guilds.cache.get('842213244297936918');
@@ -178,7 +179,25 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 await reaction.message.reactions.removeAll()
 		await reaction.message.react('846103300214095883')
                 await reaction.message.react('846103514508951563')
+		await reaction.message.react('846167025565958154')
             }
+		if (reaction._emoji.name === 'WorldTradeWithFloatingItems') {
+		    const guild = bot.guilds.cache.get('842213244297936918');
+		    const member = guild.members.cache.find(member => member.id === user.id);
+		    const embed = new Discord.MessageEmbed()
+		    
+		    .setColor('a64636')
+            	    .setTitle('World Trade With Floating Items')
+            	    .setDescription('Scam Type: Black\nScam Rank: Black\nLearn more about scam types / ranks here: [``[Click here]``](https://growtopia.cocomomc.xyz/scam-casino-games/scam-type-ranks)\n\n**Info:**\nWorld trade scamming was popular around 2014, before the developers patched this by not allowing to trade world keys if the world contains floating items. This scam was done by selling a world with often highly expensive items dropped somewhere in the world, for extremely cheap. Several tricks were used, suck as joining the world to a door near that item, taking the item after trade and/or using checkpoints. This world trade scam ended up being a popular way to scam fail scammers, which also was popular series to be seen on Youtube back then.\n\nMore can be found in the world LEARNABOUTSCAMS or by going to https://growtopia.cocomomc.xyz/learn-about-scams')
+            	    .setTimestamp()
+		    
+		    member.send(embed)
+                await reaction.message.reactions.removeAll()
+		await reaction.message.react('846103300214095883')
+                await reaction.message.react('846103514508951563')
+		await reaction.message.react('846167025565958154')
+            }
+	
        }
 };
 })
@@ -190,10 +209,11 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('a64636')
             .setTitle('Scams')
-            .setDescription('Drop Games : <:DropGame:846103300214095883>\nTrust Games : <:TrustGame:846103514508951563>')
+            .setDescription('Drop Games : <:DropGame:846103300214095883>\nTrust Games : <:TrustGame:846103514508951563>\nWorld Trade With Floating Items : <:WorldTradeWithFloatingItems:846167025565958154>')
 	const msg = await bot.channels.cache.get('845456151495311390').send(embed)
         msg.react('846103300214095883');
 	msg.react('846103514508951563');
+	msg.react('846167025565958154');
     }
 })
 
