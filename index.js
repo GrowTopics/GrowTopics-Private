@@ -7,8 +7,8 @@ const prefix = "="
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity("GrowTopics", {
-        type: "STREAMING",
+    bot.user.setActivity(`${bot.users.cache.size} users!`, {
+        type: "WATCHING",
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
 
@@ -19,6 +19,20 @@ bot.on('ready', () => {
 
     })
 });
+
+bot.on('guildMemberAdd', member => {
+    bot.user.setActivity(`${bot.users.cache.size} users!`, { 
+        type: "WATCHING", 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    });
+})
+
+bot.on('guildMemberRemove', member => {
+    bot.user.setActivity(`${bot.users.cache.size} users!`, { 
+        type: "WATCHING", 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    });
+})
 
 //DM Command
 bot.on('message', async message => {
