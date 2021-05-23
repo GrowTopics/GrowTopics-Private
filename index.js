@@ -181,7 +181,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
        }
 };
-}
+})
 	
 //drop game command
 bot.on('message', async message => {
