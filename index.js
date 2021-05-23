@@ -149,7 +149,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         const tdc = bot.guilds.cache.get('842213244297936918')
         if (user.id === bot.user.id) return
         if (reaction.message.author.id === bot.user.id) {
-            if (reaction._emoji.name === '846103300214095883') {
+            if (reaction._emoji.name === '<:DropGame:846103300214095883>') {
 		    const guild = bot.guilds.cache.get('842213244297936918');
 		    const member = guild.members.cache.find(member => member.id === user.id);
 		    const embed = new Discord.MessageEmbed()
@@ -164,7 +164,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 await reaction.message.react('846103300214095883')
 		await reaction.message.react('846103514508951563')
 	    }
-		    if (reaction._emoji.name === '846103514508951563') {
+		    if (reaction._emoji.name === '<:TrustGame:846103514508951563>') {
 		    const guild = bot.guilds.cache.get('842213244297936918');
 		    const member = guild.members.cache.find(member => member.id === user.id);
 		    const embed = new Discord.MessageEmbed()
