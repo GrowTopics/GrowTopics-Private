@@ -189,7 +189,7 @@ bot.on('message', async message => {
             .setTitle('Drop Games')
             .setDescription('Learn more about drop games by reacting with a 1️⃣!')
         message.channel.send(exampleEmbed);
-        msg.react('❌');
+        reaction.message.react('❌');
     }
 })
 
