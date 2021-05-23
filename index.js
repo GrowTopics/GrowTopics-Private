@@ -155,28 +155,28 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		    const embed = new Discord.MessageEmbed()
 		    
 		    .setColor('a64636')
-            	    .setTitle('COMMANDS')
+            	    .setTitle('Drop Game')
             	    .setDescription('Scam Type: Blue\nScam Rank: Blue\nLearn more about scam types / ranks here: [``[Click here]``](https://growtopia.cocomomc.xyz/scam-casino-games/scam-type-ranks)\n\n**Info:**\nDrop game is definitely one of the most iconic and oldest scams to exist in this game since its release. Drop games have been always played and hosted, despite how many warning and guides the developers and moderators have given us. Drop game is often hosted by one scammer, but uncommonly there might be helpers for the scammer, via lock accesses or consumables that freeze or kill you. How drop game works, is that the scammer is offering a prize for the player who drops the most valuable stuff compared to the other participants. The scammer might go on giving prizes during the first rounds to gain trust from players. However, after the scammer sees something really valuable being dropped, they will kick,ban you and steal your items. These items will most likely never again return to your inventory, as support will not return scammed items.\n\n**How to avoid:**\nTo say it shortly, don\'t play drop games at all. They are illegal, which alone will result in a curse, or a ban if you are hosting. There is never a legit though behind a drop game. There\'s always an evil plan behind one to steal your valuable items. You shouldn\'t play, even if the prizes are really good of if the scammer has given prizes during the first rounds.\n\nMore can be found in the world LEARNABOUTSCAMS or by going to https://growtopia.cocomomc.xyz/learn-about-scams')
             	    .setTimestamp()
 		    
 		    member.send(embed)
                 await reaction.message.reactions.removeAll()
                 await reaction.message.react('1️⃣')
-            }
-            if (reaction._emoji.name === '✅') {
+	    }
+		    if (reaction._emoji.name === '2️⃣') {
+		    const guild = bot.guilds.cache.get('842213244297936918');
+		    const member = guild.members.cache.find(member => member.id === user.id);
+		    const embed = new Discord.MessageEmbed()
+		    
+		    .setColor('a64636')
+            	    .setTitle('Trust Game')
+            	    .setDescription('Scam Type: Blue\nScam Rank: Blue\nLearn more about scam types / ranks here: [``[Click here]``](https://growtopia.cocomomc.xyz/scam-casino-games/scam-type-ranks)\n\n**Info:**\nTrust game has two different types, where the first one resembles a drop game. Technically, it\'s a drop game but the scammer has just covered it with a different name. How the first type works is that the scammer will ask the players to drop, and the person who has \"trusted\" the most valuable stuff wins the prize. Different from drop game, the scammer might ask you not to take the item immediately to show your trust. The second trust game works when you\'re alone together with the scammer, where you show your trusts by dropping own items to close to each other. This is often made between friends, but there will most likely be a certain amount of value that the scammer wants before they will scam you. Even if the other participant is only your Growtopia friend, you shouldn\'t completely trust an internet stranger.\n\n**How to avoid:**\nThe best way to avoid one is by not playing. Like drop game, this also is illegal and will result in a curse if you get caught red-handed. The scammer might also first donate you a free WL to gain your trust before the trust game itself. In that case, after you have received you WL, leave and don\'t participate.\n\nMore can be found in the world LEARNABOUTSCAMS or by going to https://growtopia.cocomomc.xyz/learn-about-scams')
+            	    .setTimestamp()
+		    
+		    member.send(embed)
                 await reaction.message.reactions.removeAll()
-                await reaction.message.react('❌')
+                await reaction.message.react('2️⃣')
             }
-            if (reaction._emoji.name === '🚫') {
-                const description = reaction.message.embeds[0].description
-                const invites = await tdc.fetchInvites();
-                const invite = invites.find(invite => invite.url === description);
-                if (invite) {
-		    await reaction.message.reactions.removeAll()
-                    await invite.delete();
-                    await reaction.message.channel.send(`The invite link \`\`(${invite.url})\`\` has been disabled.`)
-                } else {
-                    return
                 }
             }
         }
