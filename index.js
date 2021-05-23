@@ -152,7 +152,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             if (reaction._emoji.name === '1️⃣') {
 		    const embed = new Discord.MessageEmbed()
 		    
-		    .setColor('352256')
+		    .setColor('a64636')
             	    .setTitle('COMMANDS')
             	    .setDescription('Scam Type: Blue\nScam Rank: Blue\nLearn more about scam types / ranks here: [``[Click here]``](https://growtopia.cocomomc.xyz/scam-casino-games/scam-type-ranks)\n\n**Info:**\nDrop game is definitely one of the most iconic and oldest scams to exist in this game since its release. Drop games have been always played and hosted, despite how many warning and guides the developers and moderators have given us. Drop game is often hosted by one scammer, but uncommonly there might be helpers for the scammer, via lock accesses or consumables that freeze or kill you. How drop game works, is that the scammer is offering a prize for the player who drops the most valuable stuff compared to the other participants. The scammer might go on giving prizes during the first rounds to gain trust from players. However, after the scammer sees something really valuable being dropped, they will kick,ban you and steal your items. These items will most likely never again return to your inventory, as support will not return scammed items.\n\n**How to avoid:**\nTo say it shortly, don\'t play drop games at all. They are illegal, which alone will result in a curse, or a ban if you are hosting. There is never a legit though behind a drop game. There\'s always an evil plan behind one to steal your valuable items. You shouldn\'t play, even if the prizes are really good of if the scammer has given prizes during the first rounds.\n\nMore can be found in the world LEARNABOUTSCAMS or by going to https://growtopia.cocomomc.xyz/learn-about-scams')
             	    .setTimestamp()
@@ -180,6 +180,20 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         }
     }
 });
+
+//drop game command
+bot.on('message', async message => {
+    if (message.content === "=scam drop-game") {
+        const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('a64636')
+            .setTitle('Drop Games')
+            .setDescription('Learn more about drop games by reacting with a 1️⃣!')
+            .setTimestamp()
+
+        message.channel.send(exampleEmbed);
+    }
+})
+
 
 // THIS IS THE bot.login
 
