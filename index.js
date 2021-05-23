@@ -20,15 +20,15 @@ bot.on('ready', () => {
     })
 });
 
-bot.on('guildMemberAdd', member => {
-    bot.user.setActivity(`${bot.users.cache.size} users!`, { 
+bot.on('guildCreate', member => {
+    bot.user.setActivity(`${bot.guilds.cache.size} users!`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
 })
 
-bot.on('guildMemberRemove', member => {
-    bot.user.setActivity(`${bot.users.cache.size} users!`, { 
+bot.on('guildDelete', member => {
+    bot.user.setActivity(`${bot.guilds.cache.size} users!`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
