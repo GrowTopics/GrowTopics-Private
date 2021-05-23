@@ -179,10 +179,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		await reaction.message.react('1️⃣')
                 await reaction.message.react('2️⃣')
             }
-                }
-            }
-        })
-    })
+                })
+            })
 });
 
 //drop game command
