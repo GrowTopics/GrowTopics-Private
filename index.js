@@ -162,6 +162,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		    member.send(embed)
                 await reaction.message.reactions.removeAll()
                 await reaction.message.react('1️⃣')
+		await reaction.message.react('2️⃣')
 	    }
 		    if (reaction._emoji.name === '2️⃣') {
 		    const guild = bot.guilds.cache.get('842213244297936918');
@@ -175,6 +176,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		    
 		    member.send(embed)
                 await reaction.message.reactions.removeAll()
+		await reaction.message.react('1️⃣')
                 await reaction.message.react('2️⃣')
             }
                 }
@@ -185,13 +187,15 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
 //drop game command
 bot.on('message', async message => {
-    if (message.content === "=scam drop-game") {
+    if (message.content === "=scam 1") {
+	    message.delete().catch(O_o => { });
         const embed = new Discord.MessageEmbed()
             .setColor('a64636')
-            .setTitle('Drop Games')
-            .setDescription('Learn more about drop games by reacting with a 1️⃣!')
+            .setTitle('Scams')
+            .setDescription('Drop Games : 1️⃣\nTrust Games : 2️⃣')
 	const msg = await bot.channels.cache.get('845456151495311390').send(embed)
         msg.react('1️⃣');
+	msg.react('2️⃣');
     }
 })
 
