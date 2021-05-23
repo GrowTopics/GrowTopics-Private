@@ -150,8 +150,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         if (user.id === bot.user.id) return
         if (reaction.message.author.id === bot.user.id) {
             if (reaction._emoji.name === '1️⃣') {
-		    const member = guild.members.cache.find(member => member.id === user.id);
 		    const guild = bot.guilds.cache.get('842213244297936918');
+		    const member = guild.members.cache.find(member => member.id === user.id);
 		    const embed = new Discord.MessageEmbed()
 		    
 		    .setColor('a64636')
