@@ -181,7 +181,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
                 }
             }
-        }
+        })
     }
 });
 
