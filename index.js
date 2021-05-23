@@ -57,6 +57,7 @@ bot.on('message', async message => {
     }
 })
 
+//Message Inbox
 bot.on('message', async message => {
     if (message.content === "=message-us") {
         const exampleEmbed = new Discord.MessageEmbed()
@@ -108,7 +109,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 if (invite) {
 		    await reaction.message.reactions.removeAll()
                     await invite.delete();
-                    await reaction.message.channel.send(`${invite.url} Invite link disabled.`)
+                    await reaction.message.channel.send(`The invite like ``(${invite.url})`` has been disabled.`)
                 } else {
                     return
                 }
