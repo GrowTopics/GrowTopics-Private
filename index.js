@@ -180,7 +180,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 await reaction.message.react('2️⃣')
             }
        }
-});
+};
 
 //drop game command
 bot.on('message', async message => {
