@@ -109,7 +109,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 if (invite) {
 		    await reaction.message.reactions.removeAll()
                     await invite.delete();
-                    await reaction.message.channel.send(`The invite like ``(${invite.url})`` has been disabled.`)
+                    await reaction.message.channel.send(`The invite link \`\`(${invite.url})\`\` has been disabled.`)
                 } else {
                     return
                 }
