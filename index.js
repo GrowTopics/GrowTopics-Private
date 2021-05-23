@@ -7,7 +7,7 @@ const prefix = "="
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity(`${bot.guilds.cache.size} users!`, {
+    bot.user.setActivity(`www.growtopics.xyz`, {
         type: "WATCHING",
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
