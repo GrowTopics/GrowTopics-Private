@@ -195,7 +195,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             	    .setTimestamp()
 		    
 		    member.send(embed)
-                await reaction.message.reactions.removeAll('!845461877433696266')
+                await reaction.message.reactions.removeAll()
 		await reaction.message.react('846103300214095883')
                 await reaction.message.react('846103514508951563')
 		await reaction.message.react('846167025565958154')
