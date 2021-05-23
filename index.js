@@ -184,12 +184,13 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 //drop game command
 bot.on('message', async message => {
     if (message.content === "=scam drop-game") {
-        const exampleEmbed = new Discord.MessageEmbed()
+        const embed = new Discord.MessageEmbed()
             .setColor('a64636')
             .setTitle('Drop Games')
             .setDescription('Learn more about drop games by reacting with a 1️⃣!')
-        message.channel.send(exampleEmbed);
-        message.react('1️⃣');
+        message.channel.send(embed);
+	const msg = await bot.channels.cache.get('845456151495311390').send(embed)
+        msg.react('1️⃣');
     }
 })
 
