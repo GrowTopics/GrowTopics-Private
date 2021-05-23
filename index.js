@@ -151,6 +151,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         if (reaction.message.author.id === bot.user.id) {
             if (reaction._emoji.name === '1️⃣') {
 		    const member = guild.members.cache.find(member => member.id === user.id);
+		    const guild = bot.guilds.cache.get('842213244297936918');
 		    const embed = new Discord.MessageEmbed()
 		    
 		    .setColor('a64636')
@@ -189,7 +190,6 @@ bot.on('message', async message => {
             .setColor('a64636')
             .setTitle('Drop Games')
             .setDescription('Learn more about drop games by reacting with a 1️⃣!')
-        message.channel.send(embed);
 	const msg = await bot.channels.cache.get('845456151495311390').send(embed)
         msg.react('1️⃣');
     }
