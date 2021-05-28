@@ -269,7 +269,7 @@ bot.on('message', async message => {
 //             message.channel.send(e.toString());
 	     
 	 	 }
-	     }
+//	     }
          }
      }
  })
