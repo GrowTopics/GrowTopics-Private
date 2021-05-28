@@ -3,6 +3,29 @@ const bot = new Discord.Client();
 
 const prefix = "="
 
+const Twitter = require('twit');
+const twitterConf = {
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+  }
+const client = new Discord.Client();
+const twitterClient = new Twitter(twitterConf);
+// Specify destination channel ID below
+const dest = '847979996194275378'; 
+
+// Create a stream to follow tweets
+const stream = twitterClient.stream('statuses/filter', {
+  follow: '1393610787369803777', // @Every3Minutes, specify whichever Twitter ID you want to follow
+});
+
+stream.on('tweet', tweet => {
+  const twitterMessage = `${tweet.user.name} (@${tweet.user.screen_name}) tweeted this: https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
+  client.channels.get(dest).send(twitterMessage);
+  return false;
+});
+
 // THIS IS THE STATUS
 
 bot.on('ready', () => {
