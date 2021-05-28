@@ -20,20 +20,6 @@ bot.on('ready', () => {
     })
 });
 
-bot.on('guildCreate', member => {
-    bot.user.setActivity(`${bot.guilds.cache.size} users!`, { 
-        type: "WATCHING", 
-        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-    });
-})
-
-bot.on('guildDelete', member => {
-    bot.user.setActivity(`${bot.guilds.cache.size} users!`, { 
-        type: "WATCHING", 
-        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-    });
-})
-
 //DM Command
 bot.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
