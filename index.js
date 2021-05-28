@@ -241,38 +241,38 @@ bot.on('message', async message => {
 // CUP UPGRADES ------------------------------
 
 //Cup 1
-bot.on('message', async message => {
-     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-     const command = args.shift().toLowerCase();
-     const tdc = bot.guilds.cache.get('842213244297936918');
-
-     if (command === "cupgrade") {
-	 message.delete().catch(O_o => { });
-	 if (message.channel.id === '847605635449094174') {
-         
-	 if (message.author.bot) return;
-         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`You cannot officially cupgrade someone, please wait for an administrator!`);
-         if (message.content.indexOf(prefix) !== 0) return;
-         try {
-             let userID = (args[0]);
-
-             userID = userID.replace(/[^0-9]/g, '');
-             const member = tdc.members.cache.get(userID);
-
-             if (!member) return message.channel.send('Unable to find that user');
-	     if (member.roles.cache.has === '847606980596334623') {
-		 
-             member.roles.add('843328528597647392');
-
-             message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
+//bot.on('message', async message => {
+//     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+//     const command = args.shift().toLowerCase();
+//     const tdc = bot.guilds.cache.get('842213244297936918');
+//
+//     if (command === "cupgrade") {
+//	 message.delete().catch(O_o => { });
+//	 if (message.channel.id === '847605635449094174') {
+//         
+//	 if (message.author.bot) return;
+//         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`You cannot officially cupgrade someone, please wait for an administrator!`);
+//         if (message.content.indexOf(prefix) !== 0) return;
+//         try {
+//             let userID = (args[0]);
+//
+//             userID = userID.replace(/[^0-9]/g, '');
+//             const member = tdc.members.cache.get(userID);
+//
+//             if (!member) return message.channel.send('Unable to find that user');
+//	     if (member.roles.cache.has === '847606980596334623') {
+//		 
+//             await member.roles.add('843328528597647392');
+//
+//             await message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
 //         } catch (e) {
 //             message.channel.send(e.toString());
-	     
-	 	 }
-	     }
-         }
-     }
- })
+//	     
+//	 	 }
+//	     }
+//         }
+//     }
+// })
 	
 // THIS IS THE bot.login
 
