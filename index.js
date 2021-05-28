@@ -252,6 +252,20 @@ bot.on('message', async message => {
     }
 })
 
+//Channel #staff command
+bot.on('message', async message => {
+    if (message.content === "=channel <#847842532545134612>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '847842532545134612') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Staff')
+            .setDescription('For a list of staff positions, go to #staff-positions!\n```This is the place where people can see their staff upgrade status. For example, if you become a student, then you would get a message that looks like this: @User has become a Student to the staff program!```')
+	const msg = await bot.channels.cache.get('847842532545134612').send(embed)
+	}
+    }
+})
+
 // CUP UPGRADES ------------------------------
 
 //Cup 1
