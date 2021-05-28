@@ -231,7 +231,9 @@ bot.on('message', async message => {
             .setTitle('Next Cup')
             .setDescription('This is the place where people level up their work status (moving to the next cup level). Here is a list of roles roles.\n\n```Roles:```\n@Owner \n@Staff \n@Apprentice \n@Student \nFor a list of what each role does, go to #staff-positions!\n\n```Cups:```\n@Cup 1 (100 CB)\n@Cup 2 (200 CB)\n@Cup 3 (400 CB)\n@Cup 4 (800 CB)\n@Cup 5 (1,600 CB)\n@Cup 6 (3,200 CB)\n@Cup 7 (6,400 CB)\n@Cup 8 (12,800 CB)\n@Cup 9 (25,600 CB)\n@Cup 10 (51,200 CB)\nIf the staff level up to another cup, they will be able to see the level up message here. If you end up leaving the discord server and joining back, your staff role(s) will disappear, but your cup role(s) will not.')
 	const msg = await bot.channels.cache.get('845456151495311390').send(embed)
-
+    }
+})
+	
 // THIS IS THE bot.login
 
 bot.login(process.env.token);
