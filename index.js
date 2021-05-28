@@ -280,6 +280,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade1") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -306,6 +307,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade2") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -332,6 +334,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade3") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -358,6 +361,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade4") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -384,6 +388,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade5") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -410,6 +415,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade6") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -436,6 +442,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade7") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -462,6 +469,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade8") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -488,6 +496,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade9") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
@@ -514,6 +523,7 @@ bot.on('message', async message => {
      const command = args.shift().toLowerCase();
      const tdc = bot.guilds.cache.get('842213244297936918');
      if (command === "cupgrade10") {
+	     message.delete().catch(O_o => { });
          if (message.author.bot) return;
          if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
          if (message.content.indexOf(prefix) !== 0) return;
