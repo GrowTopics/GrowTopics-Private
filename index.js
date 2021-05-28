@@ -273,6 +273,266 @@ bot.on('message', async message => {
 //         }
 //     }
 // })
+
+//Cup 1
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade1") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328528597647392');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 2
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade2") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328508541140992');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328508541140992>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 3
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade3") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328486982156288');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328486982156288>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 4
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade4") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328466232410114');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328466232410114>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 5
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade5") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328448151158784');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328448151158784>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 6
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade6") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328427864227871');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328427864227871>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 7
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade7") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328406674210846');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328406674210846>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 8
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade8") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328254941331496');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328254941331496>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 9
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade9") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328165475778560');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328165475778560>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
+
+//Cup 10
+bot.on('message', async message => {
+     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+     const command = args.shift().toLowerCase();
+     const tdc = bot.guilds.cache.get('842213244297936918');
+     if (command === "cupgrade10") {
+         if (message.author.bot) return;
+         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+         if (message.content.indexOf(prefix) !== 0) return;
+         try {
+             let userID = (args[0]);
+
+             userID = userID.replace(/[^0-9]/g, '');
+             const member = tdc.members.cache.get(userID);
+
+             if (!member) return message.channel.send('Unable to find that user');
+        
+             await member.roles.add('843328090608631828');
+
+             await message.channel.send(`<@${userID}> has leveled up to <@&843328090608631828>!`)
+         } catch (e) {
+             message.channel.send(e.toString());
+         }
+     }
+ })
 	
 // THIS IS THE bot.login
 
