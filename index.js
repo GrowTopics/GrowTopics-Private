@@ -260,7 +260,7 @@ bot.on('message', async message => {
              const member = tdc.members.cache.get(userID);
 
              if (!member) return message.channel.send('Unable to find that user');
-             if (member.roles.cache.has !== "847606980596334623") return;
+	     if (member.roles.cache.has === '847606980596334623') {
 		 
              await member.roles.add('843328528597647392');
 
@@ -268,6 +268,7 @@ bot.on('message', async message => {
          } catch (e) {
              message.channel.send(e.toString());
 	     
+	 	 }
 	     }
          }
      }
