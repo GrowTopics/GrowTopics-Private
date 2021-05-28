@@ -265,7 +265,7 @@ bot.on('message', async message => {
              await member.roles.add('843328528597647392');
 
              await message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
-         } catch (e) {
+//         } catch (e) {
              message.channel.send(e.toString());
 	     
 	 	 }
