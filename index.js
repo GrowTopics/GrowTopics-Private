@@ -272,7 +272,7 @@ bot.on('message', async message => {
 //	     }
 //         }
 //     }
- })
+// })
 	
 // THIS IS THE bot.login
 
