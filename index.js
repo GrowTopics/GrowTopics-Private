@@ -262,11 +262,11 @@ bot.on('message', async message => {
              if (!member) return message.channel.send('Unable to find that user');
 	     if (member.roles.cache.has === '847606980596334623') {
 		 
-             await member.roles.add('843328528597647392');
+             member.roles.add('843328528597647392');
 
-             await message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
-         } finally (e) {
-             message.channel.send(e.toString());
+             message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
+//         } catch (e) {
+//             message.channel.send(e.toString());
 	     
 	 	 }
 	     }
