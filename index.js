@@ -211,6 +211,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 bot.on('message', async message => {
     if (message.content === "=channel <#845456151495311390>") {
 	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '845456151495311390') {
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('Scams')
@@ -226,10 +227,11 @@ bot.on('message', async message => {
 bot.on('message', async message => {
     if (message.content === "=channel <#847605635449094174>") {
 	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '847605635449094174') {
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('Next Cup')
-            .setDescription('This is the place where people level up their work status (moving to the next cup level). Here is a list of roles roles.\n\n```Roles:```\n<@&842217030911262741>\n<@&847606980596334623>\n<@&842216986565541899>\n<@&847605026184364052>\n<@&847603055972974633>\n\nFor a list of what each role does, go to <#847606515207766089>!\n\n```Cups:```\n<@&843328528597647392>\n<@&843328508541140992>\n<@&843328486982156288>\n<@&843328466232410114>\n<@&843328448151158784>\n<@&843328427864227871>\n<@&843328406674210846>\n<@&843328254941331496>\n<@&843328165475778560>\n<@&843328090608631828>\n\nIf the staff level up to another cup, they will be able to see the level up message here. If you end up leaving the discord server and joining back, your staff role(s) will disappear, but your cup role(s) will not.')
+            .setDescription('This is the place where people level up their work status (moving to the next cup level). Here is a list of staff roles.\n\n```Roles:```\n<@&842217030911262741>\n<@&847606980596334623>\n<@&842216986565541899>\n<@&847605026184364052>\n<@&847603055972974633>\n\nFor a list of what each role does, go to <#847606515207766089>!\n\n```Cups:```\n<@&843328528597647392>\n<@&843328508541140992>\n<@&843328486982156288>\n<@&843328466232410114>\n<@&843328448151158784>\n<@&843328427864227871>\n<@&843328406674210846>\n<@&843328254941331496>\n<@&843328165475778560>\n<@&843328090608631828>\n\nIf the staff level up to another cup, they will be able to see the level up message here. If you end up leaving the discord server and joining back, your staff role(s) will disappear, but your cup role(s) will not.')
 	const msg = await bot.channels.cache.get('847605635449094174').send(embed)
     }
 })
