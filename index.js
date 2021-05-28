@@ -238,41 +238,21 @@ bot.on('message', async message => {
     }
 })
 
-// CUP UPGRADES ------------------------------
+//Channel #staff-positions command
+bot.on('message', async message => {
+    if (message.content === "=channel <#847606515207766089>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '847606515207766089') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Staff Positions')
+            .setDescription('```Owner:```\nThese are the owner(s) of GrowTopics.\n\n```Administrator:```\nAdministrators have access to everything and they can overrule the rest of the staff. They are hand picked and there is no asking to become one.\n\n```Staff:```\nStaff members complete orders and do some simple jobs for CB.\n\n```Apprentice:```\nBeing an apprentice means you can officially earn the @Cup 1 (100 CB) and up roles. You are still a student, so that means that nothing changes, but the fact that you can now "Cupgrade". You officially become staff when you get to @Cup 2 (200 CB).\n\n```Student:```\nStudents have the ability to do things like report casinos and illegal games and other small tasks, but they cannot fill orders for WLs, you need to upgrade to staff. To level up to apprentice, all you have to do is get 50 CB.')
+	const msg = await bot.channels.cache.get('847605635449094174').send(embed)
+	}
+    }
+})
 
-//Cup 1
-//bot.on('message', async message => {
-//     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-//     const command = args.shift().toLowerCase();
-//     const tdc = bot.guilds.cache.get('842213244297936918');
-//
-//     if (command === "cupgrade") {
-//	 message.delete().catch(O_o => { });
-//	 if (message.channel.id === '847605635449094174') {
-//         
-//	 if (message.author.bot) return;
-//         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`You cannot officially cupgrade someone, please wait for an administrator!`);
-//         if (message.content.indexOf(prefix) !== 0) return;
-//         try {
-//             let userID = (args[0]);
-//
-//             userID = userID.replace(/[^0-9]/g, '');
-//             const member = tdc.members.cache.get(userID);
-//
-//             if (!member) return message.channel.send('Unable to find that user');
-//	     if (member.roles.cache.has === '847606980596334623') {
-//		 
-//             await member.roles.add('843328528597647392');
-//
-//             await message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
-//         } catch (e) {
-//             message.channel.send(e.toString());
-//	     
-//	 	 }
-//	     }
-//         }
-//     }
-// })
+// CUP UPGRADES ------------------------------
 
 //Cup 1
 bot.on('message', async message => {
