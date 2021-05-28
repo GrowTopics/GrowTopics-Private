@@ -267,6 +267,8 @@ bot.on('message', async message => {
              await message.channel.send(`<@${userID}> has leveled up to <@&843328528597647392>!`)
          } catch (e) {
              message.channel.send(e.toString());
+	     
+	     }
          }
      }
  })
