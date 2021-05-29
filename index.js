@@ -585,9 +585,9 @@ bot.on('message', async message => {
             .setTitle('Gender Roles')
             .setDescription('♂ <@&847989146484211712>\n♀️ <@&847989195490459678>\n⚧ <@&847989226155016212>')
 	const msg = await bot.channels.cache.get('847988655216918558').send(embed)
-	    message.react('♂')
-            message.react('♀️')
-	    message.react('⚧')
+	    msg.react('♂')
+            msg.react('♀️')
+	    msg.react('⚧')
 	}
     }
 })
