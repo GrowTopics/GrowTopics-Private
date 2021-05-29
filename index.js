@@ -96,6 +96,44 @@ bot.on('message', async message => {
     }
 })
 
+//partner Command
+bot.on('message', async message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    if (command === "force") {
+        if (message.author.bot) return;
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
+        if (message.content.indexOf(prefix) !== 0) return;
+        try {
+            let userID = (args[0] || message.author.id).toString();
+
+            userID = userID.replace(/[^0-9]/g, '');
+
+            const member = tdc.members.cache.get(userID);
+            const content = args.join(' ').replace(`${userID}`, '')
+
+            if (!member) return message.channel.send('Unable to find that user');
+
+            const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`Force Verify`);
+            embed.setDescription(`${message.author.id} has brought a wrath apon you. You have to re-verify in the GrowTopics server, starting in <#847988655216918558>!`);
+	    embed.setFooter(`You can DM this bot if you have any questions, comments or concerns.`)
+		
+            member.send(embed);
+	    member.roles.remove('847989146484211712');
+	    member.roles.remove('847989195490459678');
+	    member.roles.remove('847989226155016212');
+
+            message.channel.send(`You have un-verified <@${userID}>.`)
+		
+        } catch (e) {
+            message.channel.send(e.toString());
+        }
+    }
+})
+
 //Message Inbox
 bot.on('message', async message => {
     if (message.content === "=message-us") {
