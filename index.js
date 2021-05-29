@@ -252,6 +252,20 @@ bot.on('message', async message => {
     }
 })
 
+//Channel #partners (GrowLancer) command
+bot.on('message', async message => {
+    if (message.content === "=channel <#843868567551344670> growlancer") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '843868567551344670') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('GrowLancer')
+            .setDescription('Looking for freelancers to spice up your Growtopia experience?/nIntroducing... **GrowLancer**\n\n**GrowLancer **is a service provider platform (heavily inspired from **Growrr**) combining different services and helping them reach more clients!\n**GrowLancer **is powered by **GS Pay**, making purchases **100% scam-free**!\n\nJoin our **Discord server** to suggest and keep updated of our doings here:\n\n**Server Link:**  https://discord.gg/mSyD3mxeFU')
+	const msg = await bot.channels.cache.get('843868567551344670').send(embed)
+	}
+    }
+})
+
 // CUP UPGRADES ------------------------------
 
 //Cup 1
