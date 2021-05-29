@@ -8,7 +8,7 @@ const prefix = "="
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
     
-    bot.channels.cache.get('847602473627025448').send(`<:Green:845805015108812810> Bot Online`)
+    bot.channels.cache.get('847602473627025448').send(`🟢 Bot Online`)
     
 	bot.user.setActivity(`www.growtopics.xyz`, {
         type: "WATCHING",
