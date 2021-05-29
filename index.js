@@ -83,7 +83,8 @@ bot.on('message', async message => {
             embed.setColor('14242c');
             embed.setTitle(`Partnership`);
             embed.setDescription(`Welcome to the GrowTopics partnership program. Your partner message has been posted in <#843868567551344670> and you have been given the @Partner role on the official server. Thanks for partnering with GrowTopics!`);
-
+	    embed.setFooter(`You can DM this bot if you have any questions, comments or concerns.`)
+		
             member.send(embed);
 	    member.roles.add('843211687708721222');
 
