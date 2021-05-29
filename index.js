@@ -118,7 +118,7 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`Force Verify`);
-            embed.setDescription(`${message.author.id} has brought a wrath apon you. You have to re-verify in the GrowTopics server, starting in <#847988655216918558>!`);
+            embed.setDescription(`<@${message.author.id}> has brought a wrath apon you. You have to re-verify in the GrowTopics server, starting in <#847988655216918558>!`);
 	    embed.setFooter(`You can DM this bot if you have any questions, comments or concerns.`)
 		
             member.send(embed);
