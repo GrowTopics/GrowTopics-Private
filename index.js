@@ -137,7 +137,7 @@ bot.on('message', async message => {
 	    member.roles.remove('848321858504097792');
 	    member.roles.remove('848318293601157161');
 	    member.roles.remove('848318326858055731');
-	    member.roles.remove('848318352342122526');
+	    member.roles.remove('848318342086393886');
 	    member.roles.remove('848318352342122526');
 	    member.roles.remove('848318363141799986');
 	    member.roles.remove('848318379051974667');
