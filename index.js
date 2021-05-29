@@ -596,7 +596,7 @@ bot.on('message', async message => {
 
 //Reaction Role Assignment 1 - Gender Roles
 bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848018954794303498') {
+    if (reaction.message.id === '848307782839042129') {
         if (reaction.partial) {
             try {
                 await reaction.fetch();
@@ -645,7 +645,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
 //Channel #roles for gender reaction roles command
 bot.on('message', async message => {
-    if (message.content === "=channel <#847988655216918558> gender") {
+    if (message.content === "=channel <#847988655216918558>") {
 	    message.delete().catch(O_o => { });
 	    if (message.channel.id === '847988655216918558') {
         const embed = new Discord.MessageEmbed()
