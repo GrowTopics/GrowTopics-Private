@@ -651,12 +651,12 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('Gender Roles')
-            .setDescription('♂ <@&847989146484211712>\n♀️ <@&847989195490459678>\n⚧ <@&847989226155016212>')
+            .setDescription('♂ <@&847989146484211712>\n♀️ <@&847989195490459678>\n🤘 <@&847989226155016212>')
 	    .setFooter('This is NOT changable after you react!')
 	const msg = await bot.channels.cache.get('847988655216918558').send(embed)
-	    msg.react('♂')
-            msg.react('♀️')
-	    msg.react('⚧')
+//	    msg.react('♂')
+//            msg.react('♀️')
+//	    msg.react('🤘')
 	}
     }
 })
