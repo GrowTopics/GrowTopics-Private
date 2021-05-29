@@ -613,9 +613,9 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.add(role);
-                member.roles.remove(otherRole1);
-		member.roles.remove(otherRole2);
+                member.role.add(role);
+                member.role.remove(otherRole1);
+		member.role.remove(otherRole2);
             }
             //Female
             if (reaction.emoji.name == '♀️') {
@@ -624,9 +624,9 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.add(role);
-                member.roles.remove(otherRole1);
-		member.roles.remove(otherRole2);
+                member.role.add(role);
+                member.role.remove(otherRole1);
+		member.role.remove(otherRole2);
             }
 	    //They Them
             if (reaction.emoji.name == '⚧') {
@@ -635,9 +635,9 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.add(role);
-                member.roles.remove(otherRole1);
-		member.roles.remove(otherRole2);
+                member.role.add(role);
+                member.role.remove(otherRole1);
+		member.role.remove(otherRole2);
             }
         }
     }
