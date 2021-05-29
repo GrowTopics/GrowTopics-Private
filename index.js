@@ -596,7 +596,7 @@ bot.on('message', async message => {
 
 //Reaction Role Assignment 1 - Gender Roles
 bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '804382473504555009') {
+    if (reaction.message.id === '848018954794303498') {
         if (reaction.partial) {
             try {
                 await reaction.fetch();
