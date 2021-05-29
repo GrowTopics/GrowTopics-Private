@@ -126,6 +126,17 @@ bot.on('message', async message => {
 	    member.roles.remove('847989195490459678');
 	    member.roles.remove('847989226155016212');
 	    member.roles.remove('847989361781637130');
+	    member.roles.remove('848316110797013034');
+	    member.roles.remove('848316243488407626');
+	    member.roles.remove('848316763228864543');
+	    member.roles.remove('848317411823845408');
+	    member.roles.remove('848317448943173633');
+	    member.roles.remove('848316508866478110');
+	    member.roles.remove('848318293601157161');
+	    member.roles.remove('848318326858055731');
+	    member.roles.remove('848318342086393886');
+	    member.roles.remove('848318352342122526');
+	    member.roles.remove('848318379051974667');
 
             message.channel.send(`You have un-verified <@${userID}>.`)
 		
