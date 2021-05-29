@@ -9,7 +9,7 @@ bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
     bot.user.setActivity(`www.growtopics.xyz`, {
         type: "WATCHING",
-        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     });
 
     //Remember Chat History
@@ -257,6 +257,7 @@ bot.on('message', async message => {
     if (message.content === "=channel <#843868567551344670> growlancer") {
 	    message.delete().catch(O_o => { });
 	    if (message.channel.id === '843868567551344670') {
+	bot.channels.get('843868567551344670').send('https://discord.gg/mSyD3mxeFU');
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('GrowLancer')
