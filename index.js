@@ -539,7 +539,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
         }
         if (!user.bot) {
             //Male
-            if (reaction.emoji.name == '🕺') {
+            if (reaction.emoji.name == '♂') {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712');
                 const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
 		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
@@ -550,7 +550,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 		member.roles.remove(otherRole2);
             }
             //Female
-            if (reaction.emoji.name == '💃') {
+            if (reaction.emoji.name == '♀️') {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678');
                 const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
 		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
@@ -583,8 +583,11 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('Gender Roles')
-            .setDescription('🕺 <@&847989146484211712>\n💃 <@&847989195490459678>\n⚧ <@&847989226155016212>')
+            .setDescription('♂ <@&847989146484211712>\n♀️ <@&847989195490459678>\n⚧ <@&847989226155016212>')
 	const msg = await bot.channels.cache.get('847988655216918558').send(embed)
+	    message.react('♂')
+            message.react('♀️')
+	    message.react('⚧')
 	}
     }
 })
