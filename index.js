@@ -649,56 +649,7 @@ bot.on('message', async message => {
 
 // Reaction Roles ------------------------------
 
-//Reaction Role Assignment 1 - Gender Roles
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848307782839042129') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            //Male
-            if (reaction.emoji.name == '♂') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712');
-                const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
-		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.add(role);
-                member.roles.remove(otherRole1);
-		member.roles.remove(otherRole2);
-            }
-            //Female
-            if (reaction.emoji.name == '♀️') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678');
-                const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
-		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.add(role);
-                member.roles.remove(otherRole1);
-		member.roles.remove(otherRole2);
-            }
-	    //They Them
-            if (reaction.emoji.name == '⚧') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212');
-                const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
-		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.add(role);
-                member.roles.remove(otherRole1);
-		member.roles.remove(otherRole2);
-            }
-        }
-    }
-})
-
-//Channel #roles for gender reaction roles command
+//Gender Roles
 bot.on('message', async message => {
     if (message.content === "=channel <#847988655216918558>") {
 	    message.delete().catch(O_o => { });
@@ -709,9 +660,96 @@ bot.on('message', async message => {
             .setDescription('♂ <@&847989146484211712>\n♀️ <@&847989195490459678>\n🤘 <@&847989226155016212>')
 	    .setFooter('This is NOT changable after you react!')
 	const msg = await bot.channels.cache.get('847988655216918558').send(embed)
-//	    msg.react('♂')
-//            msg.react('♀️')
-//	    msg.react('🤘')
+	}
+    }
+})
+
+//Attach Files Roles
+bot.on('message', async message => {
+    if (message.content === "=channel <#848312438725804042>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848312438725804042') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Attach Files')
+            .setDescription('By reacting below, you agree that we can remove your verification at any time for using innapropriate content under this verification.\n\nDo you agree with the above?\n✅ will give <@&848316110797013034>')
+	    .setFooter('This is mandatory to continue!')
+	const msg = await bot.channels.cache.get('848312438725804042').send(embed)
+	}
+    }
+})
+
+//Embed Links Roles
+bot.on('message', async message => {
+    if (message.content === "=channel <#848318076898639913>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848318076898639913') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Embed Links')
+            .setDescription('By reacting below, you agree that we can remove your verification at any time for using innapropriate content under this verification.\n\nDo you agree with the above?\n✅ will give <@&848316243488407626>')
+	    .setFooter('This is mandatory to continue!')
+	const msg = await bot.channels.cache.get('848318076898639913').send(embed)
+	}
+    }
+})
+
+//External Emojis Roles
+bot.on('message', async message => {
+    if (message.content === "=channel <#848318111157583953>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848318111157583953') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('External Emojis')
+            .setDescription('By reacting below, you agree that we can remove your verification at any time for using innapropriate content under this verification.\n\nDo you agree with the above?\n✅ will give <@&848316763228864543>')
+	    .setFooter('This is mandatory to continue!')
+	const msg = await bot.channels.cache.get('848318111157583953').send(embed)
+	}
+    }
+})
+
+//VC Speak Roles
+bot.on('message', async message => {
+    if (message.content === "=channel <#848318126151303168>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848318126151303168') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('VC Speak')
+            .setDescription('By reacting below, you agree that we can remove your verification at any time for using innapropriate content under this verification.\n\nDo you agree with the above?\n✅ will give <@&848317411823845408>')
+	    .setFooter('This is mandatory to continue!')
+	const msg = await bot.channels.cache.get('848318126151303168').send(embed)
+	}
+    }
+})
+
+//VC Video Roles
+bot.on('message', async message => {
+    if (message.content === "=channel <#848318148943806494>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848318148943806494') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('VC Video')
+            .setDescription('By reacting below, you agree that we can remove your verification at any time for using innapropriate content under this verification.\n\nDo you agree with the above?\n✅ will give <@&848317448943173633>')
+	    .setFooter('This is mandatory to continue!')
+	const msg = await bot.channels.cache.get('848318148943806494').send(embed)
+	}
+    }
+})
+
+//Reactions Roles
+bot.on('message', async message => {
+    if (message.content === "=channel <#848318187362582559>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848318187362582559') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Reactions')
+            .setDescription('By reacting below, you agree that we can remove your verification at any time for using innapropriate content under this verification.\n\nDo you agree with the above?\n✅ will give <@&848316508866478110>')
+	    .setFooter('This is mandatory to continue!')
+	const msg = await bot.channels.cache.get('848318187362582559').send(embed)
 	}
     }
 })
