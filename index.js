@@ -96,7 +96,7 @@ bot.on('message', async message => {
     }
 })
 
-//partner Command
+//force verify Command
 bot.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
@@ -125,6 +125,7 @@ bot.on('message', async message => {
 	    member.roles.remove('847989146484211712');
 	    member.roles.remove('847989195490459678');
 	    member.roles.remove('847989226155016212');
+	    member.roles.remove('847989361781637130');
 
             message.channel.send(`You have un-verified <@${userID}>.`)
 		
