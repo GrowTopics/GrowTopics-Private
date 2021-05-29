@@ -122,6 +122,9 @@ bot.on('message', async message => {
 	    embed.setFooter(`You can DM this bot if you have any questions, comments or concerns.`)
 		
             member.send(embed);
+	    
+		//member role
+	    member.roles.remove('847989361781637130');
 		//gender
 	    member.roles.remove('847989146484211712');
 	    member.roles.remove('847989195490459678');
@@ -750,6 +753,21 @@ bot.on('message', async message => {
             .setDescription('By reacting below, you agree that we can remove your verification at any time for using innapropriate content under this verification.\n\nDo you agree with the above?\n✅ will give <@&848316508866478110>')
 	    .setFooter('This is mandatory to continue!')
 	const msg = await bot.channels.cache.get('848318187362582559').send(embed)
+	}
+    }
+})
+
+//member Role
+bot.on('message', async message => {
+    if (message.content === "=channel <#848322985807052851>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848322985807052851') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Member')
+            .setDescription('By reacting below, you agree that we can remove your verification at any time for being innapropriate.\n\nDo you agree with the above?\n✅ will give <@&847989361781637130>')
+	    .setFooter('This is mandatory to continue and the last step to verifying!')
+	const msg = await bot.channels.cache.get('848322985807052851').send(embed)
 	}
     }
 })
