@@ -60,6 +60,41 @@ bot.on('message', async message => {
     }
 })
 
+//partner Command
+bot.on('message', async message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    if (command === "partner") {
+        if (message.author.bot) return;
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
+        if (message.content.indexOf(prefix) !== 0) return;
+        try {
+            let userID = (args[0] || message.author.id).toString();
+
+            userID = userID.replace(/[^0-9]/g, '');
+
+            const member = tdc.members.cache.get(userID);
+            const content = args.join(' ').replace(`${userID}`, '')
+
+            if (!member) return message.channel.send('Unable to find that user');
+
+            const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`Partnership`);
+            embed.setDescription(`Welcome to the GrowTopics partnership program. Your partner message has been posted in <#843868567551344670> and you have been given the <@&843211687708721222> role on the official server. Thanks for partnering with GrowTopics!`);
+
+            member.send(embed);
+	    member.roles.add('843211687708721222');
+
+            message.channel.send(`You have officially partnered <@${userID}>.`)
+		
+        } catch (e) {
+            message.channel.send(e.toString());
+        }
+    }
+})
+
 //Message Inbox
 bot.on('message', async message => {
     if (message.content === "=message-us") {
@@ -236,6 +271,20 @@ bot.on('message', async message => {
             .setColor('14242c')
             .setTitle('Staff Positions')
             .setDescription('```Owner:```\nThese are the owner(s) of GrowTopics.\n\n```Administrator:```\nAdministrators have access to everything and they can overrule the rest of the staff. They are hand picked and there is no asking to become one.\n\n```Staff:```\nStaff members complete orders and do some simple jobs for CB.\n\n```Apprentice:```\nBeing an apprentice means you can officially earn the @Cup 1 (100 CB) and up roles. You are still a student, so that means that nothing changes, but the fact that you can now "Cupgrade". You officially become staff when you get to @Cup 2 (200 CB).\n\n```Student:```\nStudents have the ability to do things like report casinos and illegal games and other small tasks, but they cannot fill orders for WLs, you need to upgrade to staff. To level up to apprentice, all you have to do is get 50 CB.')
+	const msg = await bot.channels.cache.get('847606515207766089').send(embed)
+	}
+    }
+})
+
+//Channel #staff-positions (staff apps) command
+bot.on('message', async message => {
+    if (message.content === "=channel <#847606515207766089> apps") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '847606515207766089') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Staff Positions')
+            .setDescription('```Student:```\nStudents have the ability to do things like report casinos and illegal games and other small tasks, but they cannot fill orders for WLs, you need to upgrade to staff. To level up to apprentice, all you have to do is get 50 CB.')
 	const msg = await bot.channels.cache.get('847606515207766089').send(embed)
 	}
     }
