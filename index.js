@@ -256,8 +256,8 @@ bot.on('message', async message => {
 bot.on('message', async message => {
     if (message.content === "=channel <#843868567551344670> growlancer") {
 	    message.delete().catch(O_o => { });
+	    bot.message.send('https://discord.gg/mSyD3mxeFU');
 	    if (message.channel.id === '843868567551344670') {
-	bot.message.send('https://discord.gg/mSyD3mxeFU');
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('GrowLancer')
