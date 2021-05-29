@@ -82,7 +82,7 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`Partnership`);
-            embed.setDescription(`Welcome to the GrowTopics partnership program. Your partner message has been posted in <#843868567551344670> and you have been given the <@&843211687708721222> role on the official server. Thanks for partnering with GrowTopics!`);
+            embed.setDescription(`Welcome to the GrowTopics partnership program. Your partner message has been posted in <#843868567551344670> and you have been given the @Partner role on the official server. Thanks for partnering with GrowTopics!`);
 
             member.send(embed);
 	    member.roles.add('843211687708721222');
