@@ -523,6 +523,68 @@ bot.on('message', async message => {
          }
      }
  })
+
+// Reaction Roles ------------------------------
+
+//Reaction Role Assignment 1 - Gender Roles
+bot.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.message.id === '804382473504555009') {
+        if (reaction.partial) {
+            try {
+                await reaction.fetch();
+            } catch (error) {
+                console.error('Fetching message failed: ', error);
+                return;
+            }
+        }
+        if (!user.bot) {
+            //Male
+            if (reaction.emoji.name == '🕺') {
+                const role = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712');
+                const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
+		const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
+                const { guild } = reaction.message
+                const member = guild.members.cache.find(member => member.id === user.id);
+                member.roles.add(role);
+                member.roles.remove(otherRole);
+            }
+            //Female
+            if (reaction.emoji.name == '💃') {
+                const role = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678');
+                const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
+		const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
+                const { guild } = reaction.message
+                const member = guild.members.cache.find(member => member.id === user.id);
+                member.roles.add(role);
+                member.roles.remove(otherRole);
+            }
+	    //They Them
+            if (reaction.emoji.name == '⚧') {
+                const role = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212');
+                const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
+		const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
+                const { guild } = reaction.message
+                const member = guild.members.cache.find(member => member.id === user.id);
+                member.roles.add(role);
+                member.roles.remove(otherRole);
+            }
+        }
+    }
+})
+
+//Channel #roles for gender reaction roles command
+bot.on('message', async message => {
+    if (message.content === "=channel <#847988655216918558>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '847988655216918558') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Gender Roles')
+            .setDescription('🕺 <@&847989146484211712>\n💃 <@&847989195490459678>\n⚧ <@&847989226155016212>')
+	const msg = await bot.channels.cache.get('847988655216918558').send(embed)
+	}
+    }
+})
 	
 // THIS IS THE bot.login
 
