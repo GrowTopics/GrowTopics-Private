@@ -541,32 +541,35 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             //Male
             if (reaction.emoji.name == '🕺') {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712');
-                const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
-		const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
+                const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
+		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
                 member.roles.add(role);
-                member.roles.remove(otherRole);
+                member.roles.remove(otherRole1);
+		member.roles.remove(otherRole2);
             }
             //Female
             if (reaction.emoji.name == '💃') {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678');
-                const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
-		const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
+                const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
+		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212')
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
                 member.roles.add(role);
-                member.roles.remove(otherRole);
+                member.roles.remove(otherRole1);
+		member.roles.remove(otherRole2);
             }
 	    //They Them
             if (reaction.emoji.name == '⚧') {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '847989226155016212');
-                const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
-		const otherRole = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
+                const otherRole1 = reaction.message.guild.roles.cache.find(r => r.id === '847989146484211712')
+		const otherRole2 = reaction.message.guild.roles.cache.find(r => r.id === '847989195490459678')
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
                 member.roles.add(role);
-                member.roles.remove(otherRole);
+                member.roles.remove(otherRole1);
+		member.roles.remove(otherRole2);
             }
         }
     }
