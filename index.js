@@ -574,7 +574,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 
 //Channel #roles for gender reaction roles command
 bot.on('message', async message => {
-    if (message.content === "=channel <#847988655216918558>") {
+    if (message.content === "=channel <#847988655216918558> gender") {
 	    message.delete().catch(O_o => { });
 	    if (message.channel.id === '847988655216918558') {
         const embed = new Discord.MessageEmbed()
