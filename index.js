@@ -122,21 +122,26 @@ bot.on('message', async message => {
 	    embed.setFooter(`You can DM this bot if you have any questions, comments or concerns.`)
 		
             member.send(embed);
+		//gender
 	    member.roles.remove('847989146484211712');
 	    member.roles.remove('847989195490459678');
 	    member.roles.remove('847989226155016212');
-	    member.roles.remove('847989361781637130');
+		//verified roles
 	    member.roles.remove('848316110797013034');
 	    member.roles.remove('848316243488407626');
 	    member.roles.remove('848316763228864543');
 	    member.roles.remove('848317411823845408');
 	    member.roles.remove('848317448943173633');
 	    member.roles.remove('848316508866478110');
+		//verifying roles
+	    member.roles.remove('848321858504097792');
 	    member.roles.remove('848318293601157161');
 	    member.roles.remove('848318326858055731');
-	    member.roles.remove('848318342086393886');
 	    member.roles.remove('848318352342122526');
+	    member.roles.remove('848318352342122526');
+	    member.roles.remove('848318363141799986');
 	    member.roles.remove('848318379051974667');
+	    member.roles.remove('848321902376386560');
 
             message.channel.send(`You have un-verified <@${userID}>.`)
 		
