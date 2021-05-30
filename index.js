@@ -681,69 +681,6 @@ bot.on('message', async message => {
     }
 })
 	
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848311872544571473') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '♂') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
-    }
-})
-	    
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848311872544571473') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '♀️') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-	    }
-        }
-    }
-})
-	    
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848311872544571473') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '🤘') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
-    }
-})
-
 //Attach Files Roles
 bot.on('message', async message => {
     if (message.content === "=channel <#848312438725804042>") {
@@ -756,27 +693,6 @@ bot.on('message', async message => {
 	    .setFooter('This is mandatory to continue!')
 	const msg = await bot.channels.cache.get('848312438725804042').send(embed)
 	}
-    }
-})
-
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848328025941999616') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '✅') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848318293601157161');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
     }
 })
 
@@ -794,27 +710,6 @@ bot.on('message', async message => {
 	}
     }
 })
-
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848328044296667206') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '✅') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848318326858055731');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
-    }
-})
 	    
 //External Emojis Roles
 bot.on('message', async message => {
@@ -828,27 +723,6 @@ bot.on('message', async message => {
 	    .setFooter('This is mandatory to continue!')
 	const msg = await bot.channels.cache.get('848318111157583953').send(embed)
 	}
-    }
-})
-	    
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848328061602234418') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '✅') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848318342086393886');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
     }
 })
 
@@ -866,28 +740,6 @@ bot.on('message', async message => {
 	}
     }
 })
-	    
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848328078177861642') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '✅') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848318352342122526');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
-    }
-})
-
 
 //VC Video Roles
 bot.on('message', async message => {
@@ -901,27 +753,6 @@ bot.on('message', async message => {
 	    .setFooter('This is mandatory to continue!')
 	const msg = await bot.channels.cache.get('848318148943806494').send(embed)
 	}
-    }
-})
-	    
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848328096821936171') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '✅') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848318363141799986');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
     }
 })
 
@@ -940,27 +771,6 @@ bot.on('message', async message => {
     }
 })
 	    
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848328119885627422') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '✅') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848318379051974667');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
-    }
-})
-
 //member Role
 bot.on('message', async message => {
     if (message.content === "=channel <#848322985807052851>") {
@@ -975,25 +785,18 @@ bot.on('message', async message => {
 	}
     }
 })
-	    
-bot.on('messageReactionAdd', async (reaction, user) => {
-    if (reaction.message.id === '848330700892930078') {
-        if (reaction.partial) {
-            try {
-                await reaction.fetch();
-            } catch (error) {
-                console.error('Fetching message failed: ', error);
-                return;
-            }
-        }
-        if (!user.bot) {
-            if (reaction.emoji.name == '✅') {
-                const role = reaction.message.guild.roles.cache.find(r => r.id === '848321902376386560');
-                const { guild } = reaction.message
-                const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role);
-            }
-        }
+
+//#read
+bot.on('message', async message => {
+    if (message.content === "=channel <#848365067691229215>") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '848322985807052851') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Close Verification')
+            .setDescription('React with ✅ to close verification!')
+	const msg = await bot.channels.cache.get('848322985807052851').send(embed)
+	}
     }
 })
 	
