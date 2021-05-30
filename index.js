@@ -790,12 +790,12 @@ bot.on('message', async message => {
 bot.on('message', async message => {
     if (message.content === "=channel <#848365067691229215>") {
 	    message.delete().catch(O_o => { });
-	    if (message.channel.id === '848322985807052851') {
+	    if (message.channel.id === '848365067691229215') {
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('Close Verification')
             .setDescription('React with ✅ to close verification!')
-	const msg = await bot.channels.cache.get('848322985807052851').send(embed)
+	const msg = await bot.channels.cache.get('848365067691229215').send(embed)
 	}
     }
 })
