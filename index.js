@@ -300,6 +300,80 @@ bot.on('message', async message => {
     }
 })
 
+//add-money Command
+bot.on('message', async message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    if (command === "add-money") {
+        if (message.author.bot) return;
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
+        if (message.content.indexOf(prefix) !== 0) return;
+        try {
+            let userID = (args[0] || message.author.id).toString();
+
+            userID = userID.replace(/[^0-9]/g, '');
+
+            const member = tdc.members.cache.get(userID);
+            const content = args.join(' ').replace(`<@!${userID}> `, '')
+
+            if (!member) return message.channel.send('Unable to find that user');
+
+            const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`Money Added!`);
+            embed.setDescription(`You now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`);
+
+            member.send(embed);
+		
+	    const order = bot.channels.cache.get('848300313232408606')
+	    
+	    order.send(`<@${userID}>, you now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`)
+
+            message.channel.send(`You have updated <@${userID}>'s WLs to \`\`${content}\`\``)
+        } catch (e) {
+            message.channel.send(e.toString());
+        }
+    }
+})
+
+//remove-money Command
+bot.on('message', async message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    if (command === "remove-money") {
+        if (message.author.bot) return;
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
+        if (message.content.indexOf(prefix) !== 0) return;
+        try {
+            let userID = (args[0] || message.author.id).toString();
+
+            userID = userID.replace(/[^0-9]/g, '');
+
+            const member = tdc.members.cache.get(userID);
+            const content = args.join(' ').replace(`<@!${userID}> `, '')
+
+            if (!member) return message.channel.send('Unable to find that user');
+
+            const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`Money Removed!`);
+            embed.setDescription(`You now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`);
+
+            member.send(embed);
+		
+	    const order = bot.channels.cache.get('848300313232408606')
+	    
+	    order.send(`<@${userID}>, you now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`)
+
+            message.channel.send(`You have updated <@${userID}>'s WLs to \`\`${content}\`\``)
+        } catch (e) {
+            message.channel.send(e.toString());
+        }
+    }
+})
+
 //Message Inbox
 bot.on('message', async message => {
     if (message.content === "=message-us") {
