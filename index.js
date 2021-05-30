@@ -700,7 +700,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 
 //Attach Files Roles
 bot.on('message', async message => {
@@ -715,7 +715,7 @@ bot.on('message', async message => {
 	const msg = await bot.channels.cache.get('848312438725804042').send(embed)
 	}
     }
-})
+}
 
 bot.on('messageReactionAdd', async (reaction, user) => {
     if (reaction.message.id === '848328025941999616') {
@@ -736,7 +736,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 
 //Embed Links Roles
 bot.on('message', async message => {
@@ -772,7 +772,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 	    
 //External Emojis Roles
 bot.on('message', async message => {
@@ -808,7 +808,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 
 //VC Speak Roles
 bot.on('message', async message => {
@@ -844,7 +844,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 
 
 //VC Video Roles
@@ -881,7 +881,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 
 //Reactions Roles
 bot.on('message', async message => {
@@ -917,7 +917,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 
 //member Role
 bot.on('message', async message => {
@@ -953,7 +953,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-})
+}
 	
 // THIS IS THE bot.login
 
