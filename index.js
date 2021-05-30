@@ -682,7 +682,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -703,8 +703,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
-            }
+                member.roles.remove(role);
+	    }
         }
     }
 })
@@ -724,7 +724,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -760,7 +760,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848318293601157161');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -796,7 +796,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848318326858055731');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -832,7 +832,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848318342086393886');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -868,7 +868,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848318352342122526');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -905,7 +905,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848318363141799986');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -941,7 +941,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848318379051974667');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
@@ -977,7 +977,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848321902376386560');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.remove(role);
             }
         }
     }
