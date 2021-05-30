@@ -736,7 +736,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-}
+})
 
 //Embed Links Roles
 bot.on('message', async message => {
@@ -772,7 +772,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-}
+})
 	    
 //External Emojis Roles
 bot.on('message', async message => {
@@ -808,7 +808,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-}
+})
 
 //VC Speak Roles
 bot.on('message', async message => {
@@ -844,7 +844,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-}
+})
 
 
 //VC Video Roles
@@ -881,7 +881,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-}
+})
 
 //Reactions Roles
 bot.on('message', async message => {
@@ -917,7 +917,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-}
+})
 
 //member Role
 bot.on('message', async message => {
@@ -953,7 +953,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
             }
         }
     }
-}
+})
 	
 // THIS IS THE bot.login
 
