@@ -400,7 +400,7 @@ bot.on('message', async message => {
 
             member.send(embed);
 		
-	    const order = bot.channels.cache.get('848300313232408606')
+	    const order = bot.channels.cache.get('848300683915821116')
 	    
 	    order.send(`<@${userID}>, You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
 
@@ -437,7 +437,7 @@ bot.on('message', async message => {
 
             member.send(embed);
 		
-	    const order = bot.channels.cache.get('848300313232408606')
+	    const order = bot.channels.cache.get('848300683915821116')
 	    
 	    order.send(`<@${userID}>, You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
 
