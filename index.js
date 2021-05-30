@@ -285,11 +285,15 @@ bot.on('message', async message => {
 
             if (!member) return message.channel.send('Unable to find that user');
 		
-	    const order = bot.channels.cache.get('848209098238722130')
-	    
-	    order.send(`<@${userID}>, your order (\`\`${content}\`\`) has been taken by <@${message.author.id}>`)
+            const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`Order Accepted!`);
+            embed.setDescription(`Your order \`\`\`${content}\`\`\` has been accepted by <@${message.author.id}>`);
+	    embed.setFooter(`Keep in mind that this doesn't mean your order is in progress, it just means we have listed your order for workers.`)
 
-            message.channel.send(`Your order \`\`${content}\`\` has been marked as accepted!`)
+            member.send(embed);
+
+            message.channel.send(`Your order \`\`\`${content}\`\`\` has been marked as accepted!`)
         } catch (e) {
             message.channel.send(e.toString());
         }
