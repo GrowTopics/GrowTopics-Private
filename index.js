@@ -254,16 +254,61 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     }
 });
 
-//Invite Tracker
-bot.on('inviteCreate', async invite => {
-	const inviteEmbed = new Discord.MessageEmbed()
-	        inviteEmbed.setColor('14242c')
-		inviteEmbed.setTitle(`${invite.inviter.tag} has created an invite link!`)
-		inviteEmbed.setDescription(`${invite.url}`)
-		inviteEmbed.setFooter(`User ID: ${invite.inviter.id}`)
-	const invPost = await bot.channels.cache.get('845476323005956116').send(inviteEmbed)
-	await invPost.react('🚫');
+//Message Inbox
+bot.on('message', async message => {
+    if (message.content === "=private-order") {
+        const exampleEmbed = new Discord.MessageEmbed()
+            .setTitle('How to use this channel!')
+            .setDescription('To place an order, please put the following information in to one message in the proper order:\n```ID/Code:\nGrowID:\nService:\nWorld:\nPassword Door password:\nClear Cave Background:\nNotes:\nReward (in WLs):')
+
+        message.channel.send(exampleEmbed);
+    }
+
+if (message.author.id === '845461877433696266') return
+    if (message.channel.id == '848378692156522557' || !message.guild) {
+        const embed = new Discord.MessageEmbed()
+        const guild = bot.guilds.cache.get('842213244297936918');
+
+        embed.setColor('14242c');
+        embed.setTitle(`${message.author.tag} sent us a private order!`);
+        embed.setDescription(`<@${message.author.id}> \n ${message.content}`);
+        embed.setFooter('User ID: ' + message.author.id);
+
+        const msg = await bot.channels.cache.get('848378734993866753').send(embed)
+        msg.react('❌');
+        if (message.guild) message.delete();
+    }
 })
+
+//Private order Reactions
+bot.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.message.channel.id === '848378734993866753') {
+        const tdc = bot.guilds.cache.get('842213244297936918')
+        if (user.id === bot.user.id) return
+        if (reaction.message.author.id === bot.user.id) {
+            if (reaction._emoji.name === '❌') {
+                await reaction.message.reactions.removeAll()
+                await reaction.message.react('✅')
+            }
+            if (reaction._emoji.name === '✅') {
+                await reaction.message.reactions.removeAll()
+                await reaction.message.react('❌')
+            }
+            if (reaction._emoji.name === '🚫') {
+                const description = reaction.message.embeds[0].description
+                const invites = await tdc.fetchInvites();
+                const invite = invites.find(invite => invite.url === description);
+                if (invite) {
+		    await reaction.message.reactions.removeAll()
+                    await invite.delete();
+                    await reaction.message.channel.send(`The invite link \`\`(${invite.url})\`\` has been disabled.`)
+                } else {
+                    return
+                }
+            }
+        }
+    }
+});
 
 //Message Inbox Reactions
 bot.on('messageReactionAdd', async (reaction, user) => {
