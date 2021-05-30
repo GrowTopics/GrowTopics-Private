@@ -176,7 +176,7 @@ bot.on('message', async message => {
 
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
-            embed.setTitle(`${message.author.username} has started your order!`);
+            embed.setTitle(`Order Complete!`);
             embed.setDescription(`<@${message.author.id}> has completed order\n${content}`);
             embed.setFooter('User ID: ' + message.author.id);
 		
@@ -184,7 +184,7 @@ bot.on('message', async message => {
 		
 	    const order = bot.channels.cache.get('848209098238722130')
 	    
-	    message.order.send(`<@${message.author.id}> has completed order \`\`\`${content}\`\`\``)
+	    order.send(`<@${message.author.id}> has completed order \`\`\`${content}\`\`\``)
 		
             message.channel.send(`Your order completion has been sent to <#848209098238722130>.`)
         } catch (e) {
