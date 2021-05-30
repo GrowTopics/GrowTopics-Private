@@ -125,6 +125,8 @@ bot.on('message', async message => {
 	    
 		//member role
 	    member.roles.remove('847989361781637130');
+		//Add In Step 1
+	    member.roles.add('848321858504097792');
 		//gender
 	    member.roles.remove('847989146484211712');
 	    member.roles.remove('847989195490459678');
@@ -137,7 +139,6 @@ bot.on('message', async message => {
 	    member.roles.remove('848317448943173633');
 	    member.roles.remove('848316508866478110');
 		//verifying roles
-	    member.roles.add('848321858504097792');
 	    member.roles.remove('848318293601157161');
 	    member.roles.remove('848318326858055731');
 	    member.roles.remove('848318342086393886');
