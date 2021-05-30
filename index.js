@@ -160,7 +160,7 @@ bot.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     const tdc = bot.guilds.cache.get('842213244297936918');
-    if (command === "complete-order") {
+    if (command === "dm") {
         if (message.author.bot) return;
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
         if (message.content.indexOf(prefix) !== 0) return;
@@ -177,21 +177,59 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`Order Complete!`);
-            embed.setDescription(`<@${message.author.id}> has completed order\n${content}`);
+            embed.setDescription(`<@${message.author.id}> has completed order \`\`${content}\`\``);
             embed.setFooter('User ID: ' + message.author.id);
-		
-            message.channel.send(embed);
+
+            member.send(embed);
 		
 	    const order = bot.channels.cache.get('848209098238722130')
 	    
 	    order.send(`<@${message.author.id}> has completed order \`\`\`${content}\`\`\``)
-		
-            message.channel.send(`Your order completion has been sent to <#848209098238722130>.`)
+
+            message.channel.send(`Your order \`\`${content}\`\` has been marked as completed!`)
         } catch (e) {
             message.channel.send(e.toString());
         }
     }
 })
+
+//Complete-order Command
+//bot.on('message', async message => {
+//    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+//    const command = args.shift().toLowerCase();
+//    const tdc = bot.guilds.cache.get('842213244297936918');
+//    if (command === "complete-order") {
+//        if (message.author.bot) return;
+//        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
+//        if (message.content.indexOf(prefix) !== 0) return;
+//        try {
+//            let userID = (args[0] || message.author.id).toString();
+//
+//            userID = userID.replace(/[^0-9]/g, '');
+//
+//            const member = tdc.members.cache.get(userID);
+//            const content = args.join(' ').replace(`${userID}`, '')
+//
+//            if (!member) return message.channel.send('Unable to find that user');
+//
+//            const embed = new Discord.MessageEmbed()
+//            embed.setColor('14242c');
+//            embed.setTitle(`Order Complete!`);
+//            embed.setDescription(`<@${message.author.id}> has completed order \`\`${content}\`\``);
+//            embed.setFooter('User ID: ' + message.author.id);
+//		
+//            message.channel.send(embed);
+//		
+//	    const order = bot.channels.cache.get('848209098238722130')
+//	    
+//	    order.send(`<@${message.author.id}> has completed order \`\`\`${content}\`\`\``)
+//		
+//            message.channel.send(`Your order completion has been sent to <#848209098238722130>.`)
+//        } catch (e) {
+//            message.channel.send(e.toString());
+//        }
+//    }
+//})
 
 //Message Inbox
 bot.on('message', async message => {
