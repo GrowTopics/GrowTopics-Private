@@ -374,6 +374,80 @@ bot.on('message', async message => {
     }
 })
 
+//add-cb Command
+bot.on('message', async message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    if (command === "add-cb") {
+        if (message.author.bot) return;
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
+        if (message.content.indexOf(prefix) !== 0) return;
+        try {
+            let userID = (args[0] || message.author.id).toString();
+
+            userID = userID.replace(/[^0-9]/g, '');
+
+            const member = tdc.members.cache.get(userID);
+            const content = args.join(' ').replace(`<@!${userID}> `, '')
+
+            if (!member) return message.channel.send('Unable to find that user');
+
+            const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`CB Added!`);
+            embed.setDescription(`You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`);
+
+            member.send(embed);
+		
+	    const order = bot.channels.cache.get('848300313232408606')
+	    
+	    order.send(`<@${userID}>, You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
+
+            message.channel.send(`You have updated <@${userID}>'s CB to \`\`${content}\`\``)
+        } catch (e) {
+            message.channel.send(e.toString());
+        }
+    }
+})
+
+//remove-cb Command
+bot.on('message', async message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    if (command === "remove-cb") {
+        if (message.author.bot) return;
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
+        if (message.content.indexOf(prefix) !== 0) return;
+        try {
+            let userID = (args[0] || message.author.id).toString();
+
+            userID = userID.replace(/[^0-9]/g, '');
+
+            const member = tdc.members.cache.get(userID);
+            const content = args.join(' ').replace(`<@!${userID}> `, '')
+
+            if (!member) return message.channel.send('Unable to find that user');
+
+            const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`CB Removed!`);
+            embed.setDescription(`You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`);
+
+            member.send(embed);
+		
+	    const order = bot.channels.cache.get('848300313232408606')
+	    
+	    order.send(`<@${userID}>, You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
+
+            message.channel.send(`You have updated <@${userID}>'s CB to \`\`${content}\`\``)
+        } catch (e) {
+            message.channel.send(e.toString());
+        }
+    }
+})
+
 //Message Inbox
 bot.on('message', async message => {
     if (message.content === "=message-us") {
