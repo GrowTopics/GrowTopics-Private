@@ -322,13 +322,13 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`Money Added!`);
-            embed.setDescription(`You now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`);
+            embed.setDescription(`You now have (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`);
 
             member.send(embed);
 		
 	    const order = bot.channels.cache.get('848300313232408606')
 	    
-	    order.send(`<@${userID}>, you now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`)
+	    order.send(`<@${userID}>, you now have (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`)
 
             message.channel.send(`You have updated <@${userID}>'s WLs to \`\`${content}\`\``)
         } catch (e) {
@@ -359,13 +359,13 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`Money Removed!`);
-            embed.setDescription(`You now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`);
+            embed.setDescription(`You now have (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`);
 
             member.send(embed);
 		
 	    const order = bot.channels.cache.get('848300313232408606')
 	    
-	    order.send(`<@${userID}>, you now (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`)
+	    order.send(`<@${userID}>, you now have (\`\`${content} WLs\`\`) in GrowTopics Pay, edited by <@${message.author.id}>`)
 
             message.channel.send(`You have updated <@${userID}>'s WLs to \`\`${content}\`\``)
         } catch (e) {
@@ -396,13 +396,13 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`CB Added!`);
-            embed.setDescription(`You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`);
+            embed.setDescription(`You now have (\`\`${content} CB\`\`), edited by <@${message.author.id}>`);
 
             member.send(embed);
 		
 	    const order = bot.channels.cache.get('848300683915821116')
 	    
-	    order.send(`<@${userID}>, You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
+	    order.send(`<@${userID}>, You now have (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
 
             message.channel.send(`You have updated <@${userID}>'s CB to \`\`${content}\`\``)
         } catch (e) {
@@ -433,13 +433,13 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`CB Removed!`);
-            embed.setDescription(`You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`);
+            embed.setDescription(`You now have (\`\`${content} CB\`\`), edited by <@${message.author.id}>`);
 
             member.send(embed);
 		
 	    const order = bot.channels.cache.get('848300683915821116')
 	    
-	    order.send(`<@${userID}>, You now (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
+	    order.send(`<@${userID}>, You now have (\`\`${content} CB\`\`), edited by <@${message.author.id}>`)
 
             message.channel.send(`You have updated <@${userID}>'s CB to \`\`${content}\`\``)
         } catch (e) {
