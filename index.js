@@ -259,7 +259,7 @@ bot.on('message', async message => {
     if (message.content === "=private-order") {
         const exampleEmbed = new Discord.MessageEmbed()
             .setTitle('How to use this channel!')
-            .setDescription('To place an order, please put the following information in to one message in the proper order:\n```ID/Code:\nGrowID:\nService:\nWorld:\nPassword Door password:\nClear Cave Background:\nNotes:\nReward (in WLs):')
+            .setDescription('To place an order, please put the following information in to one message in the proper order:\n```ID/Code:\nGrowID:\nService:\nWorld:\nPassword Door password:\nClear Cave Background:\nNotes:\nReward (in WLs):```')
 
         message.channel.send(exampleEmbed);
     }
