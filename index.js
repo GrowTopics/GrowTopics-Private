@@ -288,40 +288,6 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`Order Accepted!`);
-            embed.setDescription(`<@${message.author.id}> has accepted the following order:\n\`\`\`${content}\`\`\``);
-            embed.setFooter('Keep in mind that this just means that we have created your order and its ID, it does not mean it is in progress yet, but it will be really soon!');
-
-            member.send(embed);
-
-            message.channel.send(`Your order acceptance has been sent to <@${userID}>.`)
-        } catch (e) {
-            message.channel.send(e.toString());
-        }
-    }
-})
-
-//accept-order Command
-bot.on('message', async message => {
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-    const tdc = bot.guilds.cache.get('842213244297936918');
-    if (command === "accept-order") {
-        if (message.author.bot) return;
-        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
-        if (message.content.indexOf(prefix) !== 0) return;
-        try {
-            let userID = (args[0] || message.author.id).toString();
-
-            userID = userID.replace(/[^0-9]/g, '');
-
-            const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`${userID} `, '')
-
-            if (!member) return message.channel.send('Unable to find that user');
-
-            const embed = new Discord.MessageEmbed()
-            embed.setColor('14242c');
-            embed.setTitle(`Order Accepted!`);
             embed.setDescription(`Your order (\`\`${content}\`\`) has been taken by <@${message.author.id}>`);
 
             member.send(embed);
