@@ -284,13 +284,6 @@ bot.on('message', async message => {
             const content = args.join(' ').replace(`${userID} `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
-
-            const embed = new Discord.MessageEmbed()
-            embed.setColor('14242c');
-            embed.setTitle(`Order Accepted!`);
-            embed.setDescription(`Your order (\`\`${content}\`\`) has been taken by <@${message.author.id}>`);
-
-            member.send(embed);
 		
 	    const order = bot.channels.cache.get('848209098238722130')
 	    
