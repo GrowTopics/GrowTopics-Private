@@ -244,7 +244,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`${userID} `, '')
+            const content = args.join(' ').replace(`<@ ${userID} > `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
