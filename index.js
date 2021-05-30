@@ -666,7 +666,7 @@ bot.on('message', async message => {
 	}
     }
 })
-
+	
 bot.on('messageReactionAdd', async (reaction, user) => {
     if (reaction.message.id === '848311872544571473') {
         if (reaction.partial) {
@@ -682,25 +682,53 @@ bot.on('messageReactionAdd', async (reaction, user) => {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.add(role)
             }
-	if (!user.bot) {
+        }
+    }
+})
+	    
+bot.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.message.id === '848311872544571473') {
+        if (reaction.partial) {
+            try {
+                await reaction.fetch();
+            } catch (error) {
+                console.error('Fetching message failed: ', error);
+                return;
+            }
+        }
+        if (!user.bot) {
             if (reaction.emoji.name == '♀️') {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.add(role)
             }
-	if (!user.bot) {
+        }
+    }
+})
+	    
+bot.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.message.id === '848311872544571473') {
+        if (reaction.partial) {
+            try {
+                await reaction.fetch();
+            } catch (error) {
+                console.error('Fetching message failed: ', error);
+                return;
+            }
+        }
+        if (!user.bot) {
             if (reaction.emoji.name == '🤘') {
                 const role = reaction.message.guild.roles.cache.find(r => r.id === '848321858504097792');
                 const { guild } = reaction.message
                 const member = guild.members.cache.find(member => member.id === user.id);
-                member.roles.remove(role)
+                member.roles.add(role)
             }
         }
     }
-}
+})
 
 //Attach Files Roles
 bot.on('message', async message => {
