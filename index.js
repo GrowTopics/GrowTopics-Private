@@ -715,7 +715,7 @@ bot.on('message', async message => {
 	const msg = await bot.channels.cache.get('848312438725804042').send(embed)
 	}
     }
-}
+})
 
 bot.on('messageReactionAdd', async (reaction, user) => {
     if (reaction.message.id === '848328025941999616') {
