@@ -160,7 +160,7 @@ bot.on('message', async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     const tdc = bot.guilds.cache.get('842213244297936918');
-    if (command === "dm") {
+    if (command === "complete-order") {
         if (message.author.bot) return;
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(`Only staff members can use this command.`);
         if (message.content.indexOf(prefix) !== 0) return;
