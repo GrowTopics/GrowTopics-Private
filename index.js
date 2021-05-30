@@ -321,15 +321,29 @@ bot.on('message', async message => {
     }
 })
 
-//Channel #staff-positions command
+//Channel #staff-positions (positions) command
 bot.on('message', async message => {
-    if (message.content === "=channel <#847606515207766089>") {
+    if (message.content === "=channel <#847606515207766089> positions") {
 	    message.delete().catch(O_o => { });
 	    if (message.channel.id === '847606515207766089') {
         const embed = new Discord.MessageEmbed()
             .setColor('14242c')
             .setTitle('Staff Positions')
             .setDescription('```Owner:```\nThese are the owner(s) of GrowTopics.\n\n```Administrator:```\nAdministrators have access to everything and they can overrule the rest of the staff. They are hand picked and there is no asking to become one.\n\n```Staff:```\nStaff members complete orders and do some simple jobs for CB.\n\n```Apprentice:```\nBeing an apprentice means you can officially earn the @Cup 1 (100 CB) and up roles. You are still a student, so that means that nothing changes, but the fact that you can now "Cupgrade". You officially become staff when you get to @Cup 2 (200 CB).\n\n```Student:```\nStudents have the ability to do things like report casinos and illegal games and other small tasks, but they cannot fill orders for WLs, you need to upgrade to staff. To level up to apprentice, all you have to do is get 50 CB.')
+	const msg = await bot.channels.cache.get('847606515207766089').send(embed)
+	}
+    }
+})
+
+//Channel #staff-positions (leveling) command
+bot.on('message', async message => {
+    if (message.content === "=channel <#847606515207766089> leveling") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '847606515207766089') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Staff Leveling')
+            .setDescription('Every staff member has a level that they can level up with. But the way that it works is a little funky. Every person has a coffee cup with 0 coffee beans and over time, as you do things, you can get coffee beans and you will need to get a certain amount of coffee beans to get a full cup of coffee. The next level will need double the amount of the last level. Here are the roles:\n<@&843328528597647392>\n<@&843328508541140992>\n<@&843328486982156288>\n<@&843328466232410114>\n<@&843328448151158784>\n<@&843328427864227871>\n<@&843328406674210846>\n<@&843328254941331496>\n<@&843328165475778560>\n<@&843328090608631828>\nEach role shows how much coffee beans (CB) you need to level up to the next level.')
 	const msg = await bot.channels.cache.get('847606515207766089').send(embed)
 	}
     }
