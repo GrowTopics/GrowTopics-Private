@@ -182,11 +182,9 @@ bot.on('message', async message => {
 		
             message.channel.send(embed);
 		
-	    const channel = bot.channels.cache.get('848209098238722130')
+	    const order = bot.channels.cache.get('848209098238722130')
 	    
-	    message.channel.send(`<@${message.author.id}> has completed order \`\`\`${content}\`\`\``)
-
-	    const channel = bot.channels.cache.get('845476323005956116')
+	    message.order.send(`<@${message.author.id}> has completed order \`\`\`${content}\`\`\``)
 		
             message.channel.send(`Your order completion has been sent to <#848209098238722130>.`)
         } catch (e) {
