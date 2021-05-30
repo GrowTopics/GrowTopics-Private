@@ -250,7 +250,7 @@ bot.on('message', async message => {
 
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
-            embed.setTitle(`Order Started!`);
+            embed.setTitle(`Order Created!`);
             embed.setDescription(`Your order (\`\`${content}\`\`) has been created by <@${message.author.id}>`);
 
             member.send(embed);
@@ -287,7 +287,7 @@ bot.on('message', async message => {
 
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
-            embed.setTitle(`Order Accepted`);
+            embed.setTitle(`Order Accepted!`);
             embed.setDescription(`<@${message.author.id}> has accepted the following order:\n\`\`\`${content}\`\`\``);
             embed.setFooter('Keep in mind that this just means that we have created your order and its ID, it does not mean it is in progress yet, but it will be really soon!');
 
