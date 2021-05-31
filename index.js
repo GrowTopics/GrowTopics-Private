@@ -791,7 +791,6 @@ bot.on('message', async message => {
     const command = args.shift().toLowerCase();
     const tdc = bot.guilds.cache.get('842213244297936918');
     if (command === "cupgrade") {
-        message.delete().catch(O_o => { });
         if (message.author.bot) return;
         if (message.content.indexOf(prefix) !== 0) return;
         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
@@ -822,6 +821,8 @@ bot.on('message', async message => {
             embed.setDescription(`You have leveled up to ${role.name}, edited by <@${message.author.id}>`);
 
             member.send(embed);
+		
+	    message.channel.send(`You have cupgraded <@${userID}> to ${role.name}.`)
 		
         } catch (e) {
             message.channel.send(e.toString());
