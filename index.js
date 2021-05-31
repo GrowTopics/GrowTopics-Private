@@ -798,20 +798,17 @@ bot.on('message', async message => {
         try {
             let userID = (args[0]);
             userID = userID.replace(/[^0-9]/g, '');
-            await message.channel.send(userID);
 
             const member = tdc.members.cache.get(userID);
             if(!member) return message.channel.send('Unable to find that user.');
 
             let roles = ['843328528597647392', '843328508541140992', '843328486982156288', '843328466232410114', '843328448151158784', '843328427864227871', '843328406674210846', '843328254941331496', '843328165475778560', '843328090608631828'];
             let currentRole = member.roles.cache.filter(role => roles.includes(role.id));
-            if (currentRole.length > 0) currentRole = currentRole[role.length - 1];
-            if (currentRole.length === 0) currentRole = null;
-            await message.channel.send(currentRole.toString());
+            currentRole = currentRole.length > 0 ? currentRole[role.length - 1] : null;
+            if (currentRole === roles[roles.length - 1]) return await message.channel.send("User is already at max cup role.")
 
             let role = roles[0];
             if(currentRole) role = roles[roles.indexOf(currentRole) + 1];
-            await message.channel.send(role.toString());
 
             await member.roles.add(role);
             if (currentRole) await member.roles.remove(currentRole);
