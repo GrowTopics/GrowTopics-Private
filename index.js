@@ -770,6 +770,21 @@ bot.on('message', async message => {
     }
 })
 
+//Channel #partners (Block Corp) command
+bot.on('message', async message => {
+    if (message.content === "=channel <#843868567551344670> blockcorp") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '843868567551344670') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('Block Corporation')
+            .setDescription('BlockCorp is a up and coming service provider company. We were established in 2018 by Bundestag and xWeird. Over the past year, we have separated from GrowStocks and become our own independent company. We have handled hundreds of orders, and did orders for many popular members of the Growtopia community. You can order at our website found below.\n\n**Website**: https://blockcorp.xyz')
+	const msg = await bot.channels.cache.get('843868567551344670').send(embed)
+	message.channel.send('https://discord.gg/egbuKHu3mm');
+	}
+    }
+})
+
 // CUP UPGRADES ------------------------------
 
 //Cup 1
