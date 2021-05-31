@@ -793,7 +793,7 @@ bot.on('message', async message => {
     const tdc = bot.guilds.cache.get('842213244297936918');
     if (command === "cupgrade") {
         if (message.author.bot) return;
-        if (message.content.indexOf(prefix !== 0)) return;
+        if (message.content.indexOf(prefix) !== 0) return;
         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
         try {
             let userID = (args[0]);
