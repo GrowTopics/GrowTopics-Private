@@ -39,7 +39,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -76,7 +76,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -114,7 +114,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -150,7 +150,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -209,7 +209,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -246,7 +246,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -283,7 +283,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -320,7 +320,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 		
@@ -354,7 +354,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -391,7 +391,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -428,7 +428,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -465,7 +465,7 @@ bot.on('message', async message => {
             userID = userID.replace(/[^0-9]/g, '');
 
             const member = tdc.members.cache.get(userID);
-            const content = args.join(' ').replace(`<@!${userID}> `, '')
+            const content = args.join(' ').replace(`<@${userID}> `, '')
 
             if (!member) return message.channel.send('Unable to find that user');
 
@@ -557,9 +557,8 @@ bot.on('message', async message => {
 
         message.channel.send(exampleEmbed);
     }
-
-if (message.author.id === '845461877433696266') return
-    if (message.channel.id == '848378692156522557' || !message.guild) {
+	
+	if (message.channel.id == '848378692156522557') {
         const embed = new Discord.MessageEmbed()
         const guild = bot.guilds.cache.get('842213244297936918');
 
@@ -568,7 +567,7 @@ if (message.author.id === '845461877433696266') return
         embed.setDescription(`<@${message.author.id}> \n ${message.content}`);
         embed.setFooter('User ID: ' + message.author.id);
 
-        const msg = await bot.channels.cache.get('848378734993866753').send(embed)
+        const msg = await bot.channels.cache.get('807496028672622633').send(embed)
         msg.react('❌');
         if (message.guild) message.delete();
     }
