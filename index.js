@@ -813,7 +813,16 @@ bot.on('message', async message => {
             await member.roles.add(role);
             if (currentRole !== -1) await member.roles.remove(currentRole);
 
-            await message.channel.send(`<@${userID}> has leveled up to ${role.name}!`)
+	    const cupgrade = bot.channels.cache.get('847605635449094174')
+            await cupgrade.send(`<@${userID}> has leveled up to ${role.name}!`)
+		
+	    const embed = new Discord.MessageEmbed()
+            embed.setColor('14242c');
+            embed.setTitle(`Cupgrade!`);
+            embed.setDescription(`You have leveled up to ${role.name}, edited by <@${message.author.id}>`);
+
+            member.send(embed);
+		
         } catch (e) {
             message.channel.send(e.toString());
         }
