@@ -787,6 +787,40 @@ bot.on('message', async message => {
 
 // CUP UPGRADES ------------------------------
 
+bot.on('message', async message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const tdc = bot.guilds.cache.get('842213244297936918');
+    if (command === "cupgrade") {
+        message.delete().catch(O_o => { });
+        if (message.author.bot) return;
+        if (message.content.indexOf(prefix !== 0)) return;
+        if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
+        try {
+            let userID = (args[0]);
+            userID = userID.replace(/[^0-9]/g, '');
+
+            const member = tdc.members.cache.get(userID);
+            if(!member) return message.channel.send('Unable to find that user.');
+
+            let roles = ['843328528597647392', '843328508541140992', '843328486982156288', '843328466232410114', '843328448151158784', '843328427864227871', '843328406674210846', '843328254941331496', '843328165475778560', '843328090608631828'];
+            let currentRole = member.roles.cache.filter(role => roles.includes(role.id));
+            if (currentRole.length > 0) currentRole = currentRole[role.length - 1];
+            if (currentRole.length === 0) currentRole = null;
+
+            let role = roles[0];
+            if(currentRole) role = roles[roles.indexOf(currentRole) + 1];
+
+            await member.roles.add(role);
+            if (currentRole) await member.roles.remove(currentRole);
+
+            await message.channel.send(`<@${userID}> has leveled up to <&${role.id}>!`)
+        } catch (e) {
+            message.channel.send(e.toString());
+        }
+    }
+})
+
 //Cup 1
 bot.on('message', async message => {
      const args = message.content.slice(prefix.length).trim().split(/ +/g);
