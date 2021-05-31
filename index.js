@@ -803,7 +803,7 @@ bot.on('message', async message => {
             if(!member) return message.channel.send('Unable to find that user.');
 
             let roles = ['843328528597647392', '843328508541140992', '843328486982156288', '843328466232410114', '843328448151158784', '843328427864227871', '843328406674210846', '843328254941331496', '843328165475778560', '843328090608631828'];
-            let currentRole = member.roles.cache.filter(role => roles.includes(role.id));
+            let currentRole = member.roles.cache.filter(role => roles.includes(role.id.toString())).keyArray;
             currentRole = currentRole.length > 0 ? currentRole[currentRole.length - 1] : null;
             if (currentRole === roles[roles.length - 1]) return await message.channel.send("User is already at max cup role.")
 
