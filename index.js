@@ -808,13 +808,13 @@ bot.on('message', async message => {
             if (currentRole === roles[roles.length - 1]) return await message.channel.send("User is already at max cup role.")
 
             let role = roles[0];
-            if(currentRole) role = roles[roles.indexOf(currentRole) + 1];
+            if (currentRole !== null) role = roles[roles.indexOf(currentRole) + 1];
             role = tdc.roles.cache.get(role);
 
             await member.roles.add(role);
-            if (currentRole) await member.roles.remove(currentRole);
+            if (currentRole !== null) await member.roles.remove(currentRole);
 
-            await message.channel.send(`<@${userID}> has leveled up to <&${role.id}>!`)
+            await message.channel.send(`<@${userID}> has leveled up to <@&${role.id}>!`)
         } catch (e) {
             message.channel.send(e.toString());
         }
