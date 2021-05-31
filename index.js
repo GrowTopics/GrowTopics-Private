@@ -809,6 +809,7 @@ bot.on('message', async message => {
 
             let role = roles[0];
             if(currentRole) role = roles[roles.indexOf(currentRole) + 1];
+            role = tdc.roles.cache.get(role);
 
             await member.roles.add(role);
             if (currentRole) await member.roles.remove(currentRole);
