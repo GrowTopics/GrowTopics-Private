@@ -792,13 +792,13 @@ bot.on('message', async message => {
     const command = args.shift().toLowerCase();
     const tdc = bot.guilds.cache.get('842213244297936918');
     if (command === "cupgrade") {
-        message.delete().catch(O_o => { });
         if (message.author.bot) return;
         if (message.content.indexOf(prefix !== 0)) return;
         if (!message.member.roles.cache.has('847606980596334623')) return message.channel.send(`Hello there, it seams that you don't have the permission to cupgrade someone. Please wait for an admin and delete this message.`);
         try {
             let userID = (args[0]);
             userID = userID.replace(/[^0-9]/g, '');
+            await message.channel.send(userID);
 
             const member = tdc.members.cache.get(userID);
             if(!member) return message.channel.send('Unable to find that user.');
@@ -807,9 +807,11 @@ bot.on('message', async message => {
             let currentRole = member.roles.cache.filter(role => roles.includes(role.id));
             if (currentRole.length > 0) currentRole = currentRole[role.length - 1];
             if (currentRole.length === 0) currentRole = null;
+            await message.channel.send(currentRole.toString());
 
             let role = roles[0];
             if(currentRole) role = roles[roles.indexOf(currentRole) + 1];
+            await message.channel.send(role.toString());
 
             await member.roles.add(role);
             if (currentRole) await member.roles.remove(currentRole);
