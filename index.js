@@ -812,7 +812,7 @@ bot.on('message', async message => {
             await message.channel.send(role.name);
 
             await member.roles.add(role);
-            await member.roles.remove(currentRole);
+            if (currentRole !== -1) await member.roles.remove(currentRole);
 
             await message.channel.send(`<@${userID}> has leveled up to <@&${role.id}>!`)
         } catch (e) {
