@@ -809,6 +809,7 @@ bot.on('message', async message => {
             if (currentRole === roles[roles.length - 1]) return await message.channel.send("User is already at max cup role.")
 
             let role = tdc.roles.cache.get(roles[currentRoleIndex + 1]);
+            await message.channel.send(role.name);
 
             await member.roles.add(role);
             await member.roles.remove(currentRole);
