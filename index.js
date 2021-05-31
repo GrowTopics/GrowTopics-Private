@@ -804,11 +804,11 @@ bot.on('message', async message => {
 
             let roles = ['843328528597647392', '843328508541140992', '843328486982156288', '843328466232410114', '843328448151158784', '843328427864227871', '843328406674210846', '843328254941331496', '843328165475778560', '843328090608631828'];
             let currentRole = member.roles.cache.filter(role => roles.includes(role.id.toString())).keyArray;
-            currentRole = currentRole.length > 0 ? currentRole[currentRole.length - 1] : null;
+            currentRole = currentRole.length > 0 ? currentRole[currentRole.length - 1] : -1;
+            let currentRoleIndex = roles.indexOf(currentRole);
             if (currentRole === roles[roles.length - 1]) return await message.channel.send("User is already at max cup role.")
 
-            let role = currentRole === null ? roles[0] : roles[roles.indexOf(currentRole) + 1];
-            role = tdc.roles.cache.get(role);
+            let role = tdc.roles.cache.get(roles[currentRoleIndex + 1]);
 
             await member.roles.add(role);
             await member.roles.remove(currentRole);
