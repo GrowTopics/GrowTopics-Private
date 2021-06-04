@@ -327,7 +327,7 @@ bot.on('message', async message => {
             const embed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`Order Accepted!`);
-            embed.setDescription(`Your order \`\`\`${content}\`\`\` has been accepted by <@${message.author.id}>`);
+            embed.setDescription(`Your order \`\`${content}\`\` has been accepted by <@${message.author.id}>`);
 	    embed.setFooter(`Keep in mind that this doesn't mean your order is in progress, it just means we have listed your order for workers.`)
 
             member.send(embed);
@@ -336,7 +336,7 @@ bot.on('message', async message => {
 	    
 	    order.send(`<@${userID}>, Your order (\`\`${content}\`\`) has been created by <@${message.author.id}>`)
 
-            message.channel.send(`Your order \`\`\`${content}\`\`\` has been marked as accepted!`)
+            message.channel.send(`Your order \`\`${content}\`\` has been marked as accepted!`)
         } catch (e) {
             message.channel.send(e.toString());
         }
