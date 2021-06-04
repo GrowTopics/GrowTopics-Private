@@ -331,6 +331,10 @@ bot.on('message', async message => {
 	    embed.setFooter(`Keep in mind that this doesn't mean your order is in progress, it just means we have listed your order for workers.`)
 
             member.send(embed);
+		
+	    const order = bot.channels.cache.get('848209098238722130')
+	    
+	    order.send(`<@${userID}>, Your order (\`\`${content}\`\`) has been created by <@${message.author.id}>`)
 
             message.channel.send(`Your order \`\`\`${content}\`\`\` has been marked as accepted!`)
         } catch (e) {
