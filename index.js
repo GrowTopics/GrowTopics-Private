@@ -517,13 +517,6 @@ if (message.author.id === '845461877433696266') return
         embed.setFooter('User ID: ' + message.author.id);
 
         const msg = await bot.channels.cache.get('845476323005956116').send(embed)
-	
-	const tdc = bot.guilds.cache.get('842213244297936918');
-	let userID = (args[0] || message.author.id).toString();
-	const member = tdc.members.cache.get(userID);
-	
-	member.send("**We got your message!\n**Your message has been forwarded to our staff. The first available team member will respond as soon as possible.");
-        
 	msg.react('❌');
         if (message.guild) message.delete();
     }
