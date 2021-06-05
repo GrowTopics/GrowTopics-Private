@@ -518,24 +518,13 @@ if (message.author.id === '845461877433696266') return
 
         const msg = await bot.channels.cache.get('845476323005956116').send(embed)
 	
-	let userID = (args[0] || message.author.id).toString();
-
-            userID = userID.replace(/[^0-9]/g, '');
-	
 	const tdc = bot.guilds.cache.get('842213244297936918');
+	let userID = (args[0] || message.author.id).toString();
 	const member = tdc.members.cache.get(userID);
-        const content = args.join(' ').replace(`<@!${userID}> `, '')
-
-            if (!member) return message.channel.send('Unable to find that user');
-
-            const MemberEmbed = new Discord.MessageEmbed()
-            embed.setColor('14242c');
-            embed.setTitle(`We got your message!`);
-            embed.setDescription(`Your message has been forwarded to our staff. The first available team member will respond as soon as possible.`);
-
-            member.send(MemberEmbed);
 	
-        msg.react('❌');
+	member.send("**We got your message!\n**Your message has been forwarded to our staff. The first available team member will respond as soon as possible.");
+        
+	msg.react('❌');
         if (message.guild) message.delete();
     }
 })
