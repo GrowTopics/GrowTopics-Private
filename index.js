@@ -528,12 +528,12 @@ if (message.author.id === '845461877433696266') return
 
             if (!member) return message.channel.send('Unable to find that user');
 
-            const embed = new Discord.MessageEmbed()
+            const MemberEmbed = new Discord.MessageEmbed()
             embed.setColor('14242c');
             embed.setTitle(`We got your message!`);
             embed.setDescription(`Your message has been forwarded to our staff. The first available team member will respond as soon as possible.`);
 
-            member.send(embed);
+            member.send(MemberEmbed);
 	
         msg.react('❌');
         if (message.guild) message.delete();
