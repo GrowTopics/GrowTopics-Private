@@ -799,6 +799,21 @@ bot.on('message', async message => {
     }
 })
 
+//Channel #partners The Clubbing District) command
+bot.on('message', async message => {
+    if (message.content === "=channel <#843868567551344670> tcd") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '843868567551344670') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('The Clubbing District')
+            .setDescription('The Clubbing District is a full of many clubs you can join. You will be able to create and join as many clubs as you want, just as long as you aren\'t copying other clubs in the server. If you aren\'t interested in clubs, maybe you just want to stick around and talk in our community section. \n\nP.S, we have a GrowTopics club, but you have to DM <@!845461877433696266> to join the club, just ask if you can join the GrowTopics club in The Clubbing District.')
+	const msg = await bot.channels.cache.get('843868567551344670').send(embed)
+	message.channel.send('https://discord.gg/kgtnhXTCH7');
+	}
+    }
+})
+
 // CUP UPGRADES ------------------------------
 
 bot.on('message', async message => {
