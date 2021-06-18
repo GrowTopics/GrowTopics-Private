@@ -1273,14 +1273,10 @@ bot.on('message', async message => {
     if (message.content === "=world CHANDFARM10923") return;
     if (message.channel.type == "dm") return;
     if (message.content.startsWith("=world")) {
-	    
-	    let command = command.replace('=world');
-            const content = args.join(' ').replace(`=world `, '')
-	    
         const embed = new Discord.MessageEmbed()
             .setColor('e04b57')
             .setTitle('Error')
-            .setDescription(`Hmm, it looks like we don\'t have anything on that world (\`\`${content}\`\`). Make sure that you are typing the world name in all capitals, if this error still shows up, that means this world hasn't been added to our system!`)
+            .setDescription(`Hmm, it looks like we don\'t have anything on that world. Make sure that you are typing the world name in all capitals, if this error still shows up, that means this world hasn't been added to our system!`)
 	message.channel.send(embed);
 	}
     })
@@ -1291,7 +1287,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n**Reason:** This world has trusted vending machine prices.')
+            .setDescription('This world passes all of the safety checks!\n**Reason:** \`\`This world has trusted vending machine prices.\`\`')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
 	message.channel.send(embed);
 	}
@@ -1303,7 +1299,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n**Reason:** NULL.')
+            .setDescription('This world passes all of the safety checks!\n**Reason:** \`\`NULL\`\`')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/chandfarm10923.png')
 	message.channel.send(embed);
 	}
