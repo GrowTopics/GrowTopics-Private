@@ -1276,7 +1276,7 @@ bot.on('message', async message => {
             .setColor('e04b57')
             .setTitle('Error')
             .setDescription(`Hmm, it looks like we don\'t have anything on that world (\`\`${message.content}\`\`). Make sure that you are typing the world name in all capitals, if this error still shows up, that means this world hasn't been added to our system!`)
-	message.send(embed);
+	message.channel.send(embed);
 	}
     })
 
@@ -1288,7 +1288,7 @@ bot.on('message', async message => {
             .setTitle('✅ World Safe! ✅')
             .setDescription('This world passes all of the safety checks!/n**Reason:** This world has trusted vending machine prices.')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
-	message.send(embed);
+	message.channel.send(embed);
 	}
     })
 
