@@ -1278,7 +1278,7 @@ bot.on('message', async message => {
             .setDescription(`Hmm, it looks like we don\'t have anything on that world (\`\`${message.content}\`\`). Make sure that you are typing the world name in all capitals, if this error still shows up, that means this world hasn't been added to our system!`)
 	const msg = await bot.channels.cache.get('848365067691229215').send(embed)
 	}
-    }
+    })
 })
 // world VEND0231 command
 bot.on('message', async message => {
