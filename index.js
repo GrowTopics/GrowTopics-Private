@@ -1273,6 +1273,10 @@ bot.on('message', async message => {
     if (message.content === "=world CHANDFARM10923") return;
     if (message.channel.type == "dm") return;
     if (message.content.startsWith("=world")) {
+	    
+	    let command = command.replace('=world');
+            const content = args.join(' ').replace(`=world `, '')
+	    
         const embed = new Discord.MessageEmbed()
             .setColor('e04b57')
             .setTitle('Error')
@@ -1284,6 +1288,10 @@ bot.on('message', async message => {
 // world VEND0231 command
 bot.on('message', async message => {
     if (message.content === "=world VEND0231") {
+	    
+	    let command = command.replace('=world');
+            const content = args.join(' ').replace(`=world `, '')
+	    
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
@@ -1296,6 +1304,10 @@ bot.on('message', async message => {
 // world VEND0231 command
 bot.on('message', async message => {
     if (message.content === "=world CHANDFARM10923") {
+	    
+	    let command = command.replace('=world');
+            const content = args.join(' ').replace(`=world `, '')
+	    
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
