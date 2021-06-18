@@ -1279,7 +1279,7 @@ bot.on('message', async message => {
 	const msg = await bot.channels.cache.get('848365067691229215').send(embed)
 	}
     })
-})
+
 // world VEND0231 command
 bot.on('message', async message => {
     if (message.content === "=world VEND0231") {
@@ -1290,7 +1290,7 @@ bot.on('message', async message => {
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
 	const msg = await bot.channels.cache.get('848365067691229215').send(embed)
 	}
-    })
+    }
 })
 
 // THIS IS THE bot.login
