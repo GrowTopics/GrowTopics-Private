@@ -1290,6 +1290,7 @@ bot.on('message', async message => {
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
 	const msg = await bot.channels.cache.get('848365067691229215').send(embed)
 	}
+    })
 })
 
 // THIS IS THE bot.login
