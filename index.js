@@ -1129,7 +1129,7 @@ bot.on('message', async message => {
      }
  })
 
-// Reaction Roles ------------------------------
+// world information Reaction Roles ------------------------------
 
 //Gender Roles
 bot.on('message', async message => {
@@ -1264,7 +1264,35 @@ bot.on('message', async message => {
 	}
     }
 })
+
+// world information ------------------------------
 	
+// world command
+bot.on('message', async message => {
+    if (message.content === "=world VEND0231") return;
+    if (message.channel.type == "dm") return;
+    if (message.content.startsWith("=world")) {
+        const embed = new Discord.MessageEmbed()
+            .setColor('e04b57')
+            .setTitle('Error')
+            .setDescription(`Hmm, it looks like we don\'t have anything on that world (\`\`${message.content}\`\`). Make sure that you are typing the world name in all capitals, if this error still shows up, that means this world hasn't been added to our system!`)
+	const msg = await bot.channels.cache.get('848365067691229215').send(embed)
+	}
+    }
+})
+// world VEND0231 command
+bot.on('message', async message => {
+    if (message.content === "=world VEND0231") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!/n**Reason:** This world has trusted vending machine prices.')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
+	const msg = await bot.channels.cache.get('848365067691229215').send(embed)
+	}
+    }
+})
+
 // THIS IS THE bot.login
 
 bot.login(process.env.token);
