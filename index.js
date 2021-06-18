@@ -1287,7 +1287,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n**Reason:** \`\`This world has trusted vending machine prices.\`\`')
+            .setDescription('This world passes all of the safety checks!\n**Reason:** \`\`This world has trusted vending machine prices.\`\`\nOwner: <@!653753792797605908>')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
 	message.channel.send(embed);
 	}
@@ -1299,7 +1299,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n**Reason:** \`\`NULL\`\`')
+            .setDescription('This world passes all of the safety checks!\n**Reason:** \`\`NULL\`\`\nOwner: <@!653753792797605908>')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/chandfarm10923.png')
 	message.channel.send(embed);
 	}
