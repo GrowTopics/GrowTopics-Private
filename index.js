@@ -1270,6 +1270,7 @@ bot.on('message', async message => {
 // world command
 bot.on('message', async message => {
     if (message.content === "=world VEND0231") return;
+    if (message.content === "=world CHANDFARM10923") return;
     if (message.channel.type == "dm") return;
     if (message.content.startsWith("=world")) {
         const embed = new Discord.MessageEmbed()
@@ -1286,8 +1287,20 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!/n**Reason:** This world has trusted vending machine prices.')
+            .setDescription('This world passes all of the safety checks!\n**Reason:** This world has trusted vending machine prices.')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
+	message.channel.send(embed);
+	}
+    })
+
+// world VEND0231 command
+bot.on('message', async message => {
+    if (message.content === "=world CHANDFARM10923") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!\n**Reason:** NULL.')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/chandfarm10923.png')
 	message.channel.send(embed);
 	}
     })
