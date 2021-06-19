@@ -1276,7 +1276,7 @@ bot.on('message', async message => {
     if (message.channel.type == "dm") return;
     if (message.content.startsWith("=world")) {
 	
-	let message = message.content.split(" ");
+	let message = msg.content.split(" ");
 	const content = message[1];
         
 	const embed = new Discord.MessageEmbed()
