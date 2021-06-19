@@ -1272,6 +1272,7 @@ bot.on('message', async message => {
     if (message.content === "=world VEND0231") return;
     if (message.content === "=world CHANDFARM10923") return;
     if (message.content === "=world PEPPERFARM10923") return;
+    if (message.content === "=world PGU") return;
     if (message.channel.type == "dm") return;
     if (message.content.startsWith("=world")) {
         const embed = new Discord.MessageEmbed()
@@ -1288,7 +1289,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`This world has trusted vending machine prices.\`\`\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`This world has trusted vending machine prices.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
 	message.channel.send(embed);
 	}
@@ -1300,7 +1301,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`NULL\`\`\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`NULL\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/chandfarm10923.png')
 	message.channel.send(embed);
 	}
@@ -1312,8 +1313,21 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`NULL\`\`\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`NULL\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/pepperfarm10923.png')
+	message.channel.send(embed);
+	}
+    })
+
+
+// world PGU command
+bot.on('message', async message => {
+    if (message.content === "=world PGU") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`Most prices following Growstocks protocall.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!355121277046095872>\n**Co-Owner(s)**: NULL')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/pgu.png')
 	message.channel.send(embed);
 	}
     })
