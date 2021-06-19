@@ -1275,10 +1275,14 @@ bot.on('message', async message => {
     if (message.content === "=world PGU") return;
     if (message.channel.type == "dm") return;
     if (message.content.startsWith("=world")) {
-        const embed = new Discord.MessageEmbed()
+	
+	let message = message.content.split(" ");
+	const content = message[1];
+        
+	const embed = new Discord.MessageEmbed()
             .setColor('e04b57')
             .setTitle('Error')
-            .setDescription(`Hmm, it looks like we don\'t have anything on that world. Make sure that you are typing the world name in all capitals, if this error still shows up, that means this world hasn't been added to our system!`)
+            .setDescription(`Hmm, it looks like we don\'t have anything on that world (\`\`${content}\`\`). Make sure that you are typing the world name in all capitals, if this error still shows up, that means this world hasn't been added to our system!`)
 	message.channel.send(embed);
 	}
     })
