@@ -1272,7 +1272,12 @@ bot.on('message', async message => {
     if (message.content === "=world VEND0231") return;
     if (message.content === "=world CHANDFARM10923") return;
     if (message.content === "=world PEPPERFARM10923") return;
-    if (message.content === "=world PGU") return;
+    if (message.content === "=world CRIMEPARADISE") return;
+    if (message.content === "=world SURGPARADISE") return;
+    if (message.content === "=world GALAPARADISE") return;
+    if (message.content === "=world FISHPARADISE") return;
+    if (message.content === "=world LEARNABOUTSCAMS") return;
+
     if (message.channel.type == "dm") return;
     if (message.content.startsWith("=world")) {
 	const embed = new Discord.MessageEmbed()
@@ -1328,6 +1333,66 @@ bot.on('message', async message => {
             .setTitle('✅ World Safe! ✅')
             .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`Most prices following Growstocks protocall.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!355121277046095872>\n**Co-Owner(s)**: NULL')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/pgu.png')
+	message.channel.send(embed);
+	}
+    })
+
+// world CRIMEPARADISE command
+bot.on('message', async message => {
+    if (message.content === "=world CRIMEPARADISE") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`Accurate informational world.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!790967999389368320>\n**Co-Owner(s)**: NULL\n\n**\`\`This world has an in-game partnership with GrowTopics!\`\`**')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/crimeparadise.png')
+	message.channel.send(embed);
+	}
+    })
+
+// world FISHPARADISE command
+bot.on('message', async message => {
+    if (message.content === "=world FISHPARADISE") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`Accurate informational world.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!790967999389368320>\n**Co-Owner(s)**: NULL\n\n**\`\`This world has an in-game partnership with GrowTopics!\`\`**')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/fishparadise.png')
+	message.channel.send(embed);
+	}
+    })
+
+// world SURGPARADISE command
+bot.on('message', async message => {
+    if (message.content === "=world SURGPARADISE") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`Accurate informational world.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!790967999389368320>\n**Co-Owner(s)**: NULL\n\n**\`\`This world has an in-game partnership with GrowTopics!\`\`**')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/surgparadise.png')
+	message.channel.send(embed);
+	}
+    })
+
+// world GALAPARADISE command
+bot.on('message', async message => {
+    if (message.content === "=world GALAPARADISE") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`Accurate informational world.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!790967999389368320>\n**Co-Owner(s)**: NULL\n\n**\`\`This world has an in-game partnership with GrowTopics!\`\`**')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/galaparadise.png')
+	message.channel.send(embed);
+	}
+    })
+
+// world GALAPARADISE command
+bot.on('message', async message => {
+    if (message.content === "=world LEARNABOUTSCAMS") {
+        const embed = new Discord.MessageEmbed()
+            .setColor('7fc07e')
+            .setTitle('✅ World Safe! ✅')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`Accurate informational world.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: NULL\n**Co-Owner(s)**: NULL\n\n**\`\`This world has an in-game partnership with GrowTopics!\`\`**')
+	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/learnaboutscams.png')
 	message.channel.send(embed);
 	}
     })
