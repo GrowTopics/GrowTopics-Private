@@ -24,14 +24,14 @@ class GrowTopicsPrivate(Bot):
         for cog in COGS:
             self.load_extension(cog)
 
-    def load_extension(self, name, *, package):
+    def load_extension(self, name, *, package=None):
         try:
             super().load_extension(name, package=package)
             print(f"Loaded {name}")
         except Exception as e:
             print(f"Couldn't load {name} - {e}")
             
-    def unload_extension(self, name, *, package):
+    def unload_extension(self, name, *, package=None):
         try:
             super().unload_extension(name, package=package)
             print(f"Unloaded {name}")
