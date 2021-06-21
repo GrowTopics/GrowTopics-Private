@@ -799,7 +799,7 @@ bot.on('message', async message => {
     }
 })
 
-//Channel #partners The Clubbing District) command
+//Channel #partners (The Clubbing District) command
 bot.on('message', async message => {
     if (message.content === "=channel <#843868567551344670> tcd") {
 	    message.delete().catch(O_o => { });
@@ -810,6 +810,21 @@ bot.on('message', async message => {
             .setDescription('The Clubbing District is a full of many clubs you can join. You will be able to create and join as many clubs as you want, just as long as you aren\'t copying other clubs in the server. If you aren\'t interested in clubs, maybe you just want to stick around and talk in our community section. \n\nP.S, we have a GrowTopics club, but you have to DM <@!845461877433696266> to join the club, just ask if you can join the GrowTopics club in The Clubbing District.')
 	const msg = await bot.channels.cache.get('843868567551344670').send(embed)
 	message.channel.send('https://discord.gg/kgtnhXTCH7');
+	}
+    }
+})
+
+//Channel #partners (GT Social) command
+bot.on('message', async message => {
+    if (message.content === "=channel <#843868567551344670> gts") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '843868567551344670') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('GT Social')
+            .setDescription('GTSocial is an app where you are able to visit all of Growtopia\'s most trusted and popular social media platforms! GTSocial also includes the Wiki, GrowStocks and many more unofficial partner websites. In the future GTSocial will become more than just an app. Come on in and join the discord to find out more about this application!')
+	const msg = await bot.channels.cache.get('843868567551344670').send(embed)
+	message.channel.send('https://discord.gg/cUtHu7Qrbz');
 	}
     }
 })
