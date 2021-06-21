@@ -1294,7 +1294,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
             .setColor('7fc07e')
             .setTitle('✅ World Safe! ✅')
-            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`This world has trusted vending machine prices.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>')
+            .setDescription('This world passes all of the safety checks!\n\n**Reason**: \`\`This world has trusted vending machine prices.\`\`\n**Inspector**: <@!852572302590607361>\n\n**Owner**: <@!653753792797605908>\n**Co-Owner(s)**: <@!852572302590607361>\n\n**\`\`This world has an in-game partnership with GrowTopics!\`\`**')
 	    .setImage('https://s3.amazonaws.com/world.growtopiagame.com/vend0231.png')
 	message.channel.send(embed);
 	}
