@@ -16,7 +16,7 @@ class Owner(Cog):
     
     @command("dm")
     async def _dm(self, ctx, user: discord.User, *, msg):
-        e = discord.Embed(title=f"{ctx.author.name} has sent you a message!", description=msg)
+        e = discord.Embed(title=f"{ctx.author.name} has sent you a message!", description=msg, color=discord.Color(0x14242C))
         e.set_thumbnail(url=ctx.author.avatar_url)
         e.set_footer(text=f"User ID: {ctx.author.id}")
         await user.send(embed=e)
