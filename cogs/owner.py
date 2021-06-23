@@ -16,6 +16,9 @@ class Owner(Cog):
     
     @command("dm")
     async def _dm(self, ctx, user: discord.User, *, msg):
-        await user.send(msg)
+        e = discord.Embed(title=f"{ctx.author.name} has sent you a message!", description=msg)
+        e.set_thumbnail(ctx.author.avatar_url)
+        e.set_footer(text=f"User ID: {ctx.author.id}")
+        await user.send(embed=e)
         await ctx.reply(f"📫 Sent to {user.mention}.")
     
