@@ -11,7 +11,7 @@ logger.setLevel(logging.INFO)
 handler = logging.StreamHandler()
 logger.addHandler(handler)
 
-COGS = ['jishaku']
+COGS = ['jishaku', 'cogs.owner']
 
 
 def get_prefix(bot, message):
