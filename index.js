@@ -829,6 +829,21 @@ bot.on('message', async message => {
     }
 })
 
+//Channel #partners (GrowMusic) command
+bot.on('message', async message => {
+    if (message.content === "=channel <#843868567551344670> growmusic") {
+	    message.delete().catch(O_o => { });
+	    if (message.channel.id === '843868567551344670') {
+        const embed = new Discord.MessageEmbed()
+            .setColor('14242c')
+            .setTitle('GrowMusic')
+            .setDescription('➜ A server where everyone is welcomed to join!\n➜ Socialize with other friendly Growtopians!\n➜ Stay updated on new songs added to our main world "SONGLISTS"!\nAnd more...\n➜ Music Bots, Game Bots!\n➜ Giveaways! (Free World Locks!)\n\nJoin us now!!!')
+	const msg = await bot.channels.cache.get('843868567551344670').send(embed)
+	message.channel.send('https://discord.gg/jqYx97Sj2A');
+	}
+    }
+})
+
 // CUP UPGRADES ------------------------------
 
 bot.on('message', async message => {
