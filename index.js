@@ -694,7 +694,7 @@ bot.on('message', async message => {
         const embed = new Discord.MessageEmbed()
         const guild = bot.guilds.cache.get('842213244297936918');
 
-        embed.setColor('ff55b2');
+        embed.setColor('14242c');
         embed.setTitle(`${message.author.tag} Sent a TV Request!`);
 
         const attachment = message.attachments.first();
