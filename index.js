@@ -680,7 +680,7 @@ bot.on('inviteCreate', async invite => {
 	await invPost.react('🚫');
 })
 
-//Message Us Post	
+//TV Request Us Post	
 bot.on('message', async message => {
     if (message.content === "=tv-requests") {
         const exampleEmbed = new Discord.MessageEmbed()
@@ -689,6 +689,7 @@ bot.on('message', async message => {
 
         message.channel.send(exampleEmbed);
     }
+	if (message.author.id === '845461877433696266') return
 	if (message.channel.id == '874072814452346943') {
         const embed = new Discord.MessageEmbed()
         const guild = bot.guilds.cache.get('842213244297936918');
@@ -704,10 +705,40 @@ bot.on('message', async message => {
         embed.setFooter('User ID: ' + message.author.id);
 
         const msg = await bot.channels.cache.get('874074168407228446').send(embed)
-//        msg.react('❌');
+        msg.react('❌');
         if (message.guild) message.delete();
     }
 })
+
+//TV Request Inbox Reactions
+bot.on('messageReactionAdd', async (reaction, user) => {
+    if (reaction.message.channel.id === '874074168407228446') {
+        const tdc = bot.guilds.cache.get('842213244297936918')
+        if (user.id === bot.user.id) return
+        if (reaction.message.author.id === bot.user.id) {
+            if (reaction._emoji.name === '❌') {
+                await reaction.message.reactions.removeAll()
+                await reaction.message.react('✅')
+            }
+            if (reaction._emoji.name === '✅') {
+                await reaction.message.reactions.removeAll()
+                await reaction.message.react('❌')
+            }
+            if (reaction._emoji.name === '🚫') {
+                const description = reaction.message.embeds[0].description
+                const invites = await tdc.fetchInvites();
+                const invite = invites.find(invite => invite.url === description);
+                if (invite) {
+		    await reaction.message.reactions.removeAll()
+                    await invite.delete();
+                    await reaction.message.channel.send(`The invite link \`\`(${invite.url})\`\` has been disabled.`)
+                } else {
+                    return
+                }
+            }
+        }
+    }
+});
 	
 // MESSAGE COMMANDS ------------------------------
 
