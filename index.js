@@ -680,6 +680,34 @@ bot.on('inviteCreate', async invite => {
 	await invPost.react('🚫');
 })
 
+//Message Us Post	
+bot.on('message', async message => {
+    if (message.content === "=tv-requests") {
+        const exampleEmbed = new Discord.MessageEmbed()
+            .setTitle('How to use this channel!')
+            .setDescription('Simply post your show / movie request and we will create a thread for that movie / tv show in <#874045107798704208>~')
+
+        message.channel.send(exampleEmbed);
+    }
+	if (message.channel.id == '874072814452346943') {
+        const embed = new Discord.MessageEmbed()
+        const guild = bot.guilds.cache.get('842213244297936918');
+
+        embed.setColor('ff55b2');
+        embed.setTitle(`${message.author.tag} Sent a TV Request!`);
+
+        const attachment = message.attachments.first();
+        if (attachment) embed.setImage(attachment.url);
+
+        embed.setDescription(`<@${message.author.id}> \n ${message.content}`);
+        embed.setThumbnail(message.author.avatarURL());
+        embed.setFooter('User ID: ' + message.author.id);
+
+        const msg = await bot.channels.cache.get('874074168407228446').send(embed)
+//        msg.react('❌');
+        if (message.guild) message.delete();
+    }
+
 // MESSAGE COMMANDS ------------------------------
 
 //Channel #scams command
