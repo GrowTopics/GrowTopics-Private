@@ -707,7 +707,8 @@ bot.on('message', async message => {
 //        msg.react('❌');
         if (message.guild) message.delete();
     }
-
+})
+	
 // MESSAGE COMMANDS ------------------------------
 
 //Channel #scams command
